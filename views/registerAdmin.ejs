@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Formulaire d'inscription Admin </title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="register">
+
+    <form action="registerAdmin" method="POST">
+       <h2>INSCRIPTION ADMIN</h2>
+       <hr>
+    <div class="Formulaire">
+        <label for="name">Nom Prénom</label>
+        <input type="text" placeholder="Nom"  id ="name" name="name">
+
+         
+    </div>
+    <label for="email"> Adresse Mail </label>
+    <input type="email" placeholder="Adresse-mail" id="email" name="email"> 
+    
+
+    <label for="password">Mot de passe</label>
+
+    <input type="password" placeholder="mot de passe" id="password"  name="password"> 
+      
+
+   <label  for="passwordConfirm">Mot de passe</label>
+        <input type="password"   id="passwordConfirm" name="passwordConfirm">
+   
+                <button type="submit">Register</button>
+                <div class="text-center">
+                </div>
+                <% if(locals.message) { %>
+                    <strong>
+                        <%= message %>
+                    </strong>
+                    <% } %>
+                   
+                
+</form>
+
+    
+
+
+</section>
+
+
+
+
+</body>
+
+</html>
+
+
+
+  

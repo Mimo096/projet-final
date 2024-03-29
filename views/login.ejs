@@ -1,0 +1,47 @@
+
+<%- include('header') -%> 
+<title>Connexion à l'Espace Membre | Salle de BOXE RED STAR </title>
+<meta name="description" content="Connectez-vous à l'Espace Membre de la Salle de Boxe RED STAR pour gérer votre profil, réserver des cours, et accéder à des fonctionnalités exclusives.">
+<meta name="keywords" content="connexion, espace membre, salle de boxe, profil utilisateur, réservation de cours">
+
+
+<div class="containre">
+
+<section class="login">
+ 
+	<form action="/login" method="POST">
+		<div class="reponse">
+			<% if(locals.message) { %>
+				<strong>
+					<%= message %>
+				</strong>
+				<% } %>
+		</div>
+		
+			<h1>Se connecter</h1>
+			
+			<p class="choisi-mail">Ou utiliser mon adresse e-mail </p>
+			<div class="inputs">
+				<label for="email" class="inline-label">Email</label>
+				<input type="email"  id="email" name="email"  placeholder="Email" autocomplete="current-email"><br>
+				<label for="password" class="inline-label">Password</label> 
+				<input type="password" name="password"  id="password" placeholder="Mot de pasee" autocomplete="current-password">
+			</div>
+			 
+		    <button type="submit">Se connecter </button>
+			<p>Je n'ai pas de compte, je m'en crée un.</p>
+            <div class="text-center">
+			<a href="./register">Register</a>
+		    </div>
+			
+ </form>
+    
+ 
+</section>
+<%- include('footer') -%> 	
+</div>
+
+
+
+
+

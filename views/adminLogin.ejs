@@ -1,0 +1,38 @@
+<%- include('header') -%> 
+<title>Connexion à l'Espace Admin | Salle de Boxe RED STAR </title> 
+<section class="containre">
+<div class="loginAdmin">
+	<form action="/adminLogin" method="POST">
+
+			<h1>se connecter ADMIN </h1>
+			
+			
+			<div class="inputs">
+				<label for="email">Email</label><br>
+				<input type="email"  id="email" name="email"  placeholder="Email" autocomplete="current-email"><br>
+				<label for="password">Mot de passe</label><br>
+				<input type="password" name="password"  id="password" placeholder="Mot de pasee" autocomplete="current-password"><br>
+			</div>
+			 
+		
+
+            <button type="submit">Se connecter </button>
+			<div class="text-center">
+			<!--register Admin -->
+             <!-- <p>je n'ai pas de compte je m'en crée un. <a href="./rgister">Register</a></p> -->
+			</div>
+			<% if(locals.message) { %>
+				<strong>
+					<%= message %>
+				</strong>
+				<% } %>
+ </form>
+    
+
+		
+</section>
+
+</div>
+</body>
+
+</html>

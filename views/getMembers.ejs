@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Profil Administrateur | Salle de Boxe RED STAR </title>
+    <meta name="description" content="Gérez les paramètres et les fonctionnalités administratives de la Salle de Boxe RED STAR à partir de votre profil administrateur. Accédez aux outils d'administration pour superviser les membres et personnaliser l'expérience utilisateur.">
+    <meta name="keywords" content="profil administrateur, salle de boxe, gestion administrative, outils d'administration, supervision des membres">
+	<!--font awesome cd link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<!--custom css file link -->
+	<link rel="stylesheet" href="/css/style.css">
+
+
+
+
+<div class="tableau-membres">
+<h2>liste des Members</h2>
+
+<table>
+    <thead>
+        <th>NOM PRÉNOM</th>
+        <th>ADRESSE EMAIL</th>
+    </thead>
+    <tbody>
+    <% for (let i=0; i < members.length; i++) { %>
+        <tr>
+            <td>
+             <%= members[i].NOM_UTILISATEUR %>
+            </td>
+            <td>
+             <%= members[i].EMAIL %>
+            <td>
+                <td>
+                    <a class="remove" href="delete_members/<%=members[i].id%>"><i class="fa fa-remove"></i></a>
+                </td>
+            </tr>
+    
+    
+        <% } %>
+    </tbody>
+    </table>
+</div>
+
+    

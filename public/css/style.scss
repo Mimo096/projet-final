@@ -1,0 +1,3537 @@
+/*************  define variables to reuse them  *********************************************************/
+
+/** import a font for title *****/
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:wght@200&family=Montserrat:wght@100&family=Noto+Sans+Kawi:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Riot&family=Roboto:ital,wght@1,100;1,300&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/** import a font for texte *****/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+$background-color: #fff;
+$text-color: #f8f9fa;
+$logo-width:100px;
+$border-radius:45px;
+$Police-title:"Agbalumo", system-ui;
+$Police-texte:"Open Sans", sans-serif;
+$background-color: #480303; // Couleur de fond de la page
+$Font-size-Texte:15px;
+$form-background-color: #c2a8a8; // Couleur de fond du formulaire
+$primary-color: #1b1c1b;
+$secondary-color: #480303;
+
+
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+};
+
+
+/********************************** Styles for mobile   ****************************************************/
+/************************************************************************************************************/
+
+
+
+
+      
+
+@media (max-width:768px) {
+
+/************************Style for the Navbar ****************************/
+               header{
+                       position: relative;
+                             video {
+                                   width: 100%;
+                                   height: auto;
+                                   display: block;
+                                   }
+
+                          .overlay {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    right: 0;
+                                    bottom: 0;
+                                    color: #fff;
+                                    font-size: 24px;             
+                                  .navbar{
+                                          flex-direction: column;
+                                          .logo{
+                                            display: flex;
+                                            justify-content: space-evenly;
+                                               img{
+                                           width: 70px;
+                                                 }
+                                          }
+                      .Nav-link{
+                       display: flex;
+                      justify-content: center;
+                              li{
+                        display: flex;
+                        justify-content: center;
+                        margin: 10px;
+                         margin-right: 0;
+                         margin-bottom: 10px;
+                        font-size: 20px;
+                         a{
+                      text-decoration: none;
+                      background-color: #480303;
+                      border-radius: 5px;
+                      color: #fff;
+                                                  
+                &:hover{
+                  background-color: #fff;
+                  color: #000000;
+                      }
+                                                }}}}}}
+/********* Navbar Page Profil utilisateur ************/
+
+.nabvarUser{
+
+nav {
+    background-color: #480303;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+      .logo{
+              img{
+                  width:80px; 
+                  height: auto;
+                  margin-right: 10px; 
+                 }
+              }  
+           
+            ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+                    li {
+                    margin: 0;
+                     a {
+                  text-decoration: none;
+                  color: #fff;
+                  font-size: 15px;
+                  font-weight: bold;
+                  padding: 10px;
+                  border-radius: 5px;
+                  transition: background-color 0.3s, color 0.3s;
+                        }
+                      a:hover {
+                       background-color: #480303;
+                      color: $text-color;
+                              }
+                        }
+                  }
+        }
+  }
+
+  /************* formulaire Page change mot de passe ******/
+body{
+  
+  .changePassword{
+     
+    background: url('../images/blocco-fighter.png') center center fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+   
+       .form-change-password{
+        
+         margin-bottom: 0;
+         background-size: cover;
+         display:flex;
+         justify-content: center;
+                   .reponse{
+                       strong{
+                       color: #070707;
+                             p {
+                       text-align: center;
+                               }
+               }
+                           }
+         form{
+            margin-top:100px;
+            display: flex;
+            flex-direction: column;
+            background-color: #c2a8a8;
+            height: 250px;
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 30px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px ;
+           input{
+               line-height: 1.5em;
+               margin-bottom: 10px;
+               margin-top: 10px;
+                          }
+                             
+           p{
+           text-align: center;
+           line-height: 1.5em;
+ 
+             }
+
+             button{
+                   display: inline-block;
+                   padding: 10px 20px;
+                   font-size: 18px;
+                   font-weight: bold;
+                   text-align: center;
+                   text-decoration: none;
+                   cursor: pointer;
+                   border: none;
+                   border-radius: 5px;
+                   background-color: #1b1c1b; 
+                   color: #fff; 
+                   transition: background-color 0.3s ease; 
+
+               &:hover    {
+               background-color: #590505; /* Nouvelle couleur de fond au survol */
+                         }
+ 
+                   &:focus {
+                     outline: none; /* Supprime la bordure de mise au point par défaut */
+                           }
+                    }
+             }
+                   } }
+}
+
+
+  /********************** FOOTER    ***********************/
+
+ footer{
+  background-color: #121111;
+  opacity: 3;
+  
+  
+  .footerContent
+  {
+      width: 100%;
+       padding: 70px 30px 20px ; 
+    
+  }
+
+.socialIcons
+  {
+ display: flex;
+ justify-content: center;
+
+   a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 30%;
+   }
+   a i{
+      color: #121111;
+      font-size: 40px; 
+   }
+  
+   
+      a:hover{
+          background-color: #121111;
+          transition: 0.5s;
+        }
+   
+        a:hover i{
+          color: white;
+          transition: 0.5s;
+        }
+
+}
+
+
+.footerNav ul{
+display: flex;
+justify-content: center;
+ margin:6px;
+  
+  
+   li a{
+      color: white;
+      margin: 20px;
+      text-decoration: none;
+      opacity: 0.7;
+     }
+     li{
+      list-style: none;
+    }
+    li a:hover{
+      opacity: 1;
+    }
+}
+
+.footerBottom{
+  background-color:#000;
+  padding: 20px; 
+  text-align: center;
+  p{
+      color: #fff;
+  }
+}
+ }
+    
+    /***********   Section Histoire  Page Home   ***********/
+ 
+.histoire-section {
+      background-color: #fdfcfc;
+
+                     .histoire-content{
+                               margin-top: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                              
+                                      h1{
+                                        text-align: center;
+                                        font-size: 30px;
+                                        font-family:$Police-title;
+                                        }
+                                        p{
+                                        font-size: $Font-size-Texte;
+                                        text-align: center;
+                                        margin-left: 20px; /* Marge à gauche */
+                                        margin-right: 20px;
+                                        line-height: 2em;
+                                        padding-bottom: 20px;
+                                        font-family:$Police-texte;                                    
+                                        };
+                                                                           
+                                     }
+                           
+
+                 }
+
+/***********   Section section valeurs   Page Home   ***********/
+  .valeurs-section{
+           
+  .valeurs-content {
+    
+      display: flex;
+      flex-direction: column;
+                   
+    .Nos-valeurs{
+             h2{
+              font-family:$Police-title;
+              font-size:20px;
+              text-align:center;
+              padding-bottom: 20px;
+              line-height: 1.5em;
+              
+              }
+
+              p{
+                text-align: center;
+                margin-left: 15px;
+                margin-right: 20px;
+                margin-left: 20px;
+                line-height:2em;
+                font-family:$Police-texte;
+                font-size:$Font-size-Texte;
+                padding-bottom: 20px;
+                                    
+                }
+                  
+
+
+                }
+                .right-content{
+                  img{
+                      width: 100%;
+                     
+                    }
+              }
+                  }             
+              }
+            
+            
+                
+              
+  /***********   Section Accompagenement   Page Home   ***********/
+.Accompagnement-section{
+
+
+      .Accompagnement-content{
+                      display:flex;
+                      flex-direction:column-reverse;
+                      .left-content{
+                        img{
+                          width: 100%;
+                          margin-top: 20px;
+                          margin-bottom: 10px;
+                        }
+                      }
+                                  .notre-accompagnement
+                                    {
+                                    h2{
+                                      font-family:$Police-title;
+                                      font-size: 20px;
+                                      text-align: center;
+                                      padding-bottom: 20px;
+                                      }
+                                      p{
+                                      font-family:$Police-texte;
+                                      line-height:2.5em;
+                                      font-size: 15px;
+                                      margin-left: 20px;
+                                      margin-right: 20px;
+                                       }
+                                   }        
+                        }  
+                     } 
+
+/***********   Section NosValeurs   Page Home   ***********/
+
+.NosValeurs-section{
+  .NosValeurs-content{
+                .notre-valeurs{
+                      h2{
+                          font-family:$Police-title;
+                          font-size: 20px;
+                          text-align: center;
+                          margin-bottom: 10px;
+                      }
+           p{
+            font-family:$Police-texte;
+            text-align: center;
+            margin-left: 20px;
+            font-size: 15px;
+            line-height:2em;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            }
+                     }
+                     .right-content{
+                      img{
+                        width: 100%;
+                        
+                      }
+                     }
+                    }
+  
+}
+
+ /***********   Section Actualité    Page Home   ***********/                 
+.Actualite
+            {
+            
+            height:500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom:  100px;
+          
+    
+                            img {
+                              padding-top: 60px;
+                              width: 150px;
+                              transition: transform 0.3s ease-in-out;
+                              border-radius: 7px;
+                              &:hover {
+                                transform: scale(1.1); /* Changez la taille de l'image au survol */
+                                      }
+                                      }
+                                     a{
+                                      background-color: #480303;
+                                      color: white;
+                                      display: block;
+                                      text-align: center;
+                                      text-decoration: none; 
+                                      margin-top: 30px;
+                                      border-radius: $border-radius;
+                                      
+                                      }
+                                     
+        a:hover {
+background-color: #121111;
+transition: 0.5s;
+                      }
+                     
+                     }
+                  
+
+/*********** section nos coachs page coachs ********/
+
+.containre-coachs{
+  background: #fafafb;
+        .nosCoachs{
+          padding: 40px 0;
+         
+          text-align: center;
+      .inner{
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+       
+
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+      .col{
+        flex: 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+        padding:15px;
+        .first-coach{
+          background-color: #c2a8a8;
+           width: 120px;
+           
+
+              img{
+            width: 100px;
+            height:100px;
+            border-radius: 50%; 
+          
+              }
+              .name{
+                font-size: 20px;
+              }
+        
+
+      }
+     }
+}
+     }}
+
+    }
+
+/**********  PAGE PLANING PUBLIC ******/
+.planningPublic{
+
+  h2{
+    text-align: center;
+    margin-top: 30px;
+    color: #020202;
+  }
+
+      .planning-table {
+               width:100%;
+               margin-top: 20px;
+              
+             
+      
+  a{
+    background-color: #480303;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+     
+    &:hover{
+      background-color: #121111;
+      transition: 0.5s;
+
+    }
+     
+  }
+     
+  th ,td{
+     border: 1px solid #c2a8a8;
+     text-align:center;
+     font-size: 10px;
+    
+  }
+  th {
+    background-color: #c2a8a8;
+  }}}
+
+/***********************    Page réservation   ***********/
+/***** formulaire réservation *****/
+
+
+@mixin button-style {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// Styles for .makeReservation
+.makeReservation {
+  min-height: 100vh;
+ background:url(../images/blocco-fighter.png) center/cover no-repeat; 
+  color: rgb(8, 8, 8);
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  
+
+  form {
+    background-color: $form-background-color;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; // Ajustez la largeur selon vos besoins
+    margin: 0 auto; // Pour centrer le formulaire
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+    input[type="submit"] {
+      @include button-style;
+      margin-top: 10px;
+    }
+  }
+
+  .alert.alert-success {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
+
+/********* Section Galerie  Page coachs ***********/
+
+.Galerie{
+  position: relative;
+  min-height: 100vh;
+  background:#c2a8a8;
+
+
+  h1{
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+
+  }
+  .dream{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    justify-content: center;
+    padding: 10px;
+  }
+  .image{
+    height: 250px;
+    width: 350px;
+    border: 10px #fff;
+    box-shadow: 0 5px 15px rgb(0,0,0,1);
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
+      &:hover {
+        transform: scale(1.1);
+     }
+    }
+   
+}
+.poupin{
+  position: fixed;
+  top:0; left: 0;
+  background: rgb(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  span{
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor: pointer;
+    z-index: 100;
+  }
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width:750px;
+    object-fit: cover;
+  }
+}
+};
+/*********** PAGE PLANNING ADMIN *********/
+.instructeur{
+ background-color: #c2a8a8;
+ a{
+  text-decoration: none;
+  color: #ffff;
+  transition: background-color 0.3s ease;
+  background-color: #000;
+ }
+ a:hover{
+  background-color: #590505
+ }
+}
+  
+/********** boutton-formulaire page register **********/ 
+
+.register{
+  
+  background-color: #480303;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+        .reponse{
+                strong{
+                     color: #910707;
+                     text-align: center;
+                     font-size: 13px;
+                     padding-bottom: 3px;
+                     }
+                    }
+           
+          .Formulaire{
+                  display: flex;
+                  width:100%;
+                  justify-content: space-between;
+                           }
+                  
+                           form{
+                            display: flex;
+                            flex-direction: column;
+                            background-color: #c2a8a8;
+                            height: 450px;
+                            width: 300px;
+                            padding: 10px;
+                            border-radius: 6px;
+                            box-shadow: 0 0 10px ;
+                                 h2{
+                                 text-align: center;
+                                 font-size: 20px;
+                                   }
+                                 hr{
+                                   margin: 10px 0;
+                                   height: 1px;
+                                   background-color: #fff;
+                                    }
+                                    p{
+                                      text-align: center;
+                                      line-height: 1.5em;
+                                      
+                                    }
+                                    button{
+                                      background-color: #020202;
+                                      color: #fff;
+                                      font-size: 18px;
+                                      font-weight: bold;
+                                      text-align: center;
+                                      cursor: pointer;
+                                      border: none;
+                                      border-radius: 5px;
+                                      background-color: #1b1c1b; 
+                                      color: #fff; 
+                                      transition: background-color 0.3s ease;
+                                      &:hover {
+                                        background-color: #590505; /* Nouvelle couleur de fond au survol */
+                                                      }
+                                    
+                                                &:focus {
+                                        outline: none; /* Supprime la bordure de mise au point par défaut */
+                                                        }
+                                    }   
+                                  
+                                    .boutton-formulaire {
+                                      
+                                     a{ 
+                                      display: inline-block;
+                                      padding: 10px 20px;
+                                      font-size: 18px;
+                                      font-weight: bold;
+                                      text-align: center;
+                                      text-decoration: none;
+                                      cursor: pointer;
+                                      border: none;
+                                      border-radius: 5px;
+                                      background-color: #1b1c1b; 
+                                      color: #fff; 
+                                      transition: background-color 0.3s ease; 
+                                              &:hover {
+                                        background-color: #590505; /* Nouvelle couleur de fond au survol */
+                                                      }
+                                    
+                                                &:focus {
+                                        outline: none; /* Supprime la bordure de mise au point par défaut */
+                                                        }
+                                      }
+                                      
+                                      }
+                                    
+                      div {
+                      display: flex;
+                      flex-direction: column;
+                          }
+                          label{
+                          margin-bottom: 6px;
+                                }
+                      input{
+                      margin-bottom: 5px;
+                      padding: 5px;
+  
+                          }
+                          }
+                        p{
+                        margin-top: 30px;
+}       
+               }
+
+/***********  SECTION NOS TARIF  PAGE ***********/
+
+.Nos-tarifs {
+  margin: 0;
+  padding: 0;
+  font-family:$Police-texte;
+  margin: 0;
+  padding: 0;
+  background-color: #c2a8a8;
+  color: #333;
+  text-align: center;
+  
+
+  h1 {
+      font-family:$Police-title;
+      color: #080808;
+      margin-bottom: 70px;
+  }
+
+  h2 {
+   font-family:$Police-title;
+   color: #060606;
+   font-size: 20px;
+  }
+
+  p {
+      font-family:$Police-texte;
+      line-height: 3;
+      font-size: 20px;
+  }
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    max-width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+
+  th, td {
+    border: 1px solid #ad6464;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+  img {
+      width: 300px;
+      height: auto;
+      margin-top: 10px;
+  }
+
+  a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      background-color: #480303;
+    
+      &:hover {
+          background-color: #1b1c1b;
+      }}
+}
+              
+/******************************  Page login  ********************/
+
+.containre{
+  background-color: #590505;
+      .login{
+         text-align: center;
+         padding-top: 20px;
+         height: 600px;
+          .reponse{
+    strong{
+         color: #910707;
+         text-align: center;
+         font-size: 18px;
+         padding-bottom: 3px;
+         }
+        }
+
+        form{
+            padding-top:30px;
+            background-color: #c2a8a8;
+            border-radius:$border-radius;
+            height: 400px;
+            width: 300px;
+            line-height: 1.8em;
+            font-size: 18px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px ;
+            margin-left: 50px;
+            
+             
+        input{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+         
+              }
+              h1{
+                padding-top: 20px;
+                font-size: 20px;
+              }
+        .inputs{
+               .inline-label{
+                display:inline-block;
+                width: 80px;
+                margin-right:30px;
+               }
+              }
+                button{
+                  margin-top: 15px;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  text-align: center;
+                  text-decoration: none;
+                  cursor: pointer;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #1b1c1b; 
+                  color: #fff; 
+                  transition: background-color 0.3s ease; 
+                  &:hover    {
+                    background-color: #590505; /* Nouvelle couleur de fond au survol */
+                        }
+                          
+              &:focus {
+                  outline: none; /* Supprime la bordure de mise au point par défaut */
+              }
+                }
+                
+                
+  
+              }
+      .text-center a{
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #1b1c1b; 
+                color: #fff; 
+                transition: background-color 0.3s ease; 
+
+&:hover    {
+      background-color: #590505; /* Nouvelle couleur de fond au survol */
+          }
+            
+&:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+}
+  
+                    }
+          }
+
+/************* formulaire Page change mot de passe ******/
+body{
+  
+
+     .containre{
+        
+     
+          .form-change-password{
+            background-image: url(../images/blocco-fighter.png);
+            margin-bottom: 0;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+                      .reponse{
+                          strong{
+                          color: #070707;
+                                p {
+                          text-align: center;
+                                  }
+                  }
+                              }
+            form{
+               margin-top:100px;
+               margin-bottom: 30px;
+               display: flex;
+               flex-direction: column;
+               background-color: #c2a8a8;
+               height: 300px;
+               width: 300px;
+               padding: 10px;
+               border-radius: 6px;
+               box-shadow: 0 0 10px ;
+              input{
+                  line-height: 1.5em;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                             }
+                                
+              p{
+              text-align: center;
+              line-height: 1.5em;
+    
+                }
+
+                button{
+                      display: inline-block;
+                      padding: 10px 20px;
+                      font-size: 18px;
+                      font-weight: bold;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      border: none;
+                      border-radius: 5px;
+                      background-color: #1b1c1b; 
+                      color: #fff; 
+                      transition: background-color 0.3s ease; 
+
+                  &:hover    {
+                  background-color: #590505; /* Nouvelle couleur de fond au survol */
+                            }
+    
+                      &:focus {
+                        outline: none; /* Supprime la bordure de mise au point par défaut */
+                              }
+                          }
+}
+}
+
+ }
+
+ /********** AFFICHER LES MEMBRES PAGE ADMIN  *********/
+.tableau-membres{
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    thead th {
+      background-color: #480303;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+    }
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      padding: 10px;
+    }
+    .remove {
+      color: #dc3545;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .remove:hover {
+      color: #a71d2a;
+    }
+  }
+  
+ 
+}}}
+
+}
+
+
+
+/********************************** Styles  for screen  computer  **********************************************/  
+/************************************************************************************************************/
+
+@media (min-width:1024px) {
+  
+  header{
+    position: relative;
+         video {
+                width: 100%;
+                height: auto;
+                display: block;
+               }
+
+      .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: #fff;
+                font-size: 24px;             
+              .navbar{
+                     //  flex-direction: column;
+                      .logo{
+                        display: flex;
+                        justify-content: space-between;
+                        justify-content: center;
+                        
+                           img{
+                       width: 140px;
+                             }
+                      }
+                    .Nav-link{
+                      display: flex;
+                      justify-content: center;
+                          li{
+                            display: flex;
+                            justify-content: center;
+                            margin: 10px;
+                            padding: 70px;
+                            margin-right: 0;
+                            margin-bottom: 10px;
+                            font-size: 30px;
+                            a{
+                              text-decoration: none;
+                              background-color: #480303;
+                              border-radius: 5px;
+                              color: #fff;
+                              
+                                 &:hover{
+                                background-color: #fff;
+                                color: #000000;
+                                  }
+                            }
+
+                            }
+                                  }
+                        }
+       
+                  }  
+
+      }
+
+
+/* Appliquer l'animation à un formulaire avec une classe spécifique */
+.register{
+  background-color: #480303;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+   .reponse{
+     strong{
+      color: #910707;
+      text-align: center;
+      padding-bottom: 6px;
+     }
+  }
+  @keyframes shakeAnimation {
+    0% { transform: translateX(100); }
+    25% { transform: translateX(100px); }
+    50% { transform: translateX(40px); }
+    75% { transform: translateX(100px); }
+    100% { transform: translateX(0); }
+  }
+                form{
+                  animation: shakeAnimation 6.5s ease-in-out; 
+                      display: flex;
+                      flex-direction: column;
+                      background-color: #c2a8a8;
+                      height: 450px;
+                      width: 300px;
+                      padding: 10px;
+                      border-radius: 6px;
+                      box-shadow: 0 0 10px ;
+                  h2{
+                      text-align: center;
+                      font-size: 20px;
+                    }
+                    p{
+                      text-align: center;
+                      line-height: 1.5em;
+                      
+                    }
+                  hr{
+                    margin: 10px 0;
+                    height: 1px;
+                    background-color: #fff;
+                    }
+                  button{
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  text-align: center;
+                  text-decoration: none;
+                  cursor: pointer;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #1b1c1b; 
+                  color: #fff; 
+                  transition: background-color 0.3s ease; 
+      
+        &:hover    {
+                background-color: #590505; /* Nouvelle couleur de fond au survol */
+                    }
+                      
+      &:focus {
+              outline: none; /* Supprime la bordure de mise au point par défaut */
+      }
+                        }
+                    
+      .boutton-formulaire {
+        
+         a{ 
+          display: inline-block;
+          padding: 10px 20px;
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          border: none;
+          border-radius: 5px;
+          background-color: #1b1c1b; 
+          color: #fff; 
+          transition: background-color 0.3s ease; 
+          }
+          a:hover {
+          background-color: #590505; /* Nouvelle couleur de fond au survol */
+          }
+                      
+          &:focus {
+          outline: none; /* Supprime la bordure de mise au point par défaut */
+                  }
+          
+                    }            
+         div{
+            display: flex;
+            flex-direction: column;
+            }
+         label{
+                  margin-bottom: 6px;
+              }
+        input{
+        margin-bottom: 5px;
+        padding: 5px;
+            }
+            
+          p{
+          margin-top: 30px;
+          }
+            
+                }
+
+
+ .Formulaire{
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+    }
+  }
+
+  /********* Navbar Page Profil utilisateur ************/
+.nabvarUser{
+
+  nav {
+      background-color: #480303;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+        .logo{
+                img{
+                    width:100px; 
+                    height: auto;
+                    margin-right: 10px; 
+                   }
+                }  
+             
+              ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: space-around;
+                      li {
+                      margin: 0;
+                                  a {
+                  text-decoration: none;
+                  color: #fff;
+                  font-size: 16px;
+                 font-weight: bold;
+                 padding: 10px;
+                 border-radius: 5px;
+                transition: background-color 0.3s, color 0.3s;
+                                      }
+                                      a:hover {
+                                        background-color: #480303;
+                                        color: $text-color;
+                                      }
+                          }
+                    }
+          }
+    
+    }
+
+/***********   Section notre Histoire  PAGE HOME   ***********/
+.histoire-section {
+                  /** Nesting **/ 
+                               
+                background-color:  #fff;
+                padding: 100px 0;
+    
+                  .histoire-content
+                                 {
+                              max-width: 800px;
+                              margin: 0 auto;
+                                                               
+                            h1
+                              {
+                                font-size: 60px;
+                                text-align: center;
+                                padding-bottom: 10px;
+                                font-family:"Open Sans", sans-serif;
+                                }
+                          p{
+                               font-size: 30px;
+                               text-align: center;
+                              }}
+                    }
+                            
+  .valeurs-section 
+                {
+               padding: 2px 0;
+               text-align: center;
+              
+              .valeurs-content
+                      { 
+                        display: flex;                 
+                .Nos-valeurs{                                   
+                padding: 20px;
+                   h2{
+                     font-size: 40px;
+                      }
+                   p{
+                    font-size:20px;
+                    padding-top: 60px;
+                    line-height: 2em;
+                 
+                  }
+
+             }
+                                               
+              .right-content {
+                              img {
+                              width: 750px;
+                              padding: 20px;
+                              height: 800px;
+                              border-radius: $border-radius;
+                              transition: transform 0.3s ease-in-out; /* Ajoutez une transition sur la transformation */
+        
+                                  &:hover {
+                              transform: scale(1.1); /* Changez la taille de l'image au survol */
+                                        }
+                               }
+        
+                    }}}
+
+                  
+/********** Section notre Accompagnement PAGE HOME   *****/
+  .Accompagnement-section
+                  {
+                   
+                   padding: 2px 0;
+                   text-align: center;
+                   line-height: 1.5em;
+                   font-size: 20px;
+                  
+                               .Accompagnement-content
+                                  {
+                                  display: flex;
+                                  padding: 20px;
+                                   padding: 50px;
+        
+                                         h2{
+                                            font-size: 40px;
+                                            }
+                                          p{
+                                            
+                                            padding-top: 100px;
+                                            line-height: 2em;
+                                            font-size:20px;
+                                            text-align: center;
+                                            }
+
+                                            .left-content
+                                                     { 
+                                                       img 
+                                                      {
+                                              width: 500px;
+                                              padding: 20px;
+                                              height: 500px;
+                                              border-radius: $border-radius;
+                                              transition: transform 0.3s ease-in-out;
+                                                            &:hover {
+                                                                  transform: scale(1.1); /* Changez la taille de l'image au survol */
+                                                                    }
+                             }}}}
+  /*******  Section notre valeurs  HOME PAGE  **************/
+  .NosValeurs-section{
+            
+               padding: 2px 0;
+               text-align: center;
+               line-height: 2em;
+               font-size: 18px;
+                           .NosValeurs-content{
+                                             display: flex;
+                                             padding: 20px;
+                                             text-align: center;
+                                             padding: 50px;
+
+                                             h2{
+                                                font-size: 40px;
+                                              }
+                                              p{
+                                               padding-top: 100px;
+                                               line-height: 2em;
+                                               font-size: 20px;
+                                               }
+                            .right-content{
+
+                                img  {
+                                    width: 500px;
+                                    padding: 20px;
+                                    height: 500px;
+                                    border-radius: $border-radius;
+                                    transition: transform 0.3s ease-in-out;
+                                                                &:hover {
+                                                              transform: scale(1.1); /* Changez la taille de l'image au survol */
+                                                                        }
+                                                }
+                    }}}
+
+  /***********  Section  Actualité  HOME PAGE ***********/
+.Actualite
+          {
+            background: #c2a8a8;
+             height:500px;
+            display: flex;
+            justify-content: space-evenly;
+  
+                     img {
+                        padding-top: 60px;
+                        width: 200px;
+                       border-radius:15px;
+                       transition: transform 0.3s ease-in-out;
+                            &:hover {
+                                  transform: scale(1.1); /* Changez la taille de l'image au survol */
+                                    }
+                          }
+                         a {
+                          background-color: #480303;
+                          color: white;
+                          padding: 15px 20px;
+                           display: block;
+                            text-align: center;
+                            text-decoration: none; 
+                            margin-top: 30px;
+                            border-radius: $border-radius;
+                              }
+                                            a:hover{
+                                                      background-color: #121111;
+                                                      transition: 0.5s;
+                                                  }
+        }
+//************ Page login ********************************/ 
+
+.containre{
+  .login{
+    .form {
+      background-color: #28a745;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+/************* formulaire Page change mot de passe ******/
+body{
+  
+     .changePassword{
+        
+       background: url('../images/blocco-fighter.png') center center fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      
+      
+          .form-change-password{
+           
+            margin-bottom: 0;
+            background-size: cover;
+            display:flex;
+         justify-content: center;
+                      .reponse{
+                          strong{
+                          color: #070707;
+                                p {
+                          text-align: center;
+                                  }
+                  }
+                              }
+            form{
+               margin-top:100px;
+               display: flex;
+               flex-direction: column;
+               background-color: #c2a8a8;
+               height: 300px;
+               width: 300px;
+               padding: 10px;
+               margin-bottom: 30px;
+               border-radius: 6px;
+               box-shadow: 0 0 10px ;
+              input{
+                  line-height: 1.5em;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                             }
+                                
+              p{
+              text-align: center;
+              line-height: 1.5em;
+    
+                }
+
+                button{
+                      display: inline-block;
+                      padding: 10px 20px;
+                      font-size: 18px;
+                      font-weight: bold;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      border: none;
+                      border-radius: 5px;
+                      background-color: #1b1c1b; 
+                      color: #fff; 
+                      transition: background-color 0.3s ease; 
+
+                  &:hover    {
+                  background-color: #590505; /* Nouvelle couleur de fond au survol */
+                            }
+    
+                      &:focus {
+                        outline: none; /* Supprime la bordure de mise au point par défaut */
+                              }
+                       }
+                }
+                      } }
+  }
+
+ /********** boutton-formulaire page register et login *****/ 
+
+ @mixin button-style {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// Styles for .makeReservation
+.makeReservation {
+  min-height: 100vh;
+ background:url(../images/blocco-fighter.png) center/cover no-repeat; 
+  color: rgb(8, 8, 8);
+  padding: 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  
+
+  form {
+    background-color: $form-background-color;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%; // Ajustez la largeur selon vos besoins
+    margin: 0 auto; // Pour centrer le formulaire
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      font-size: 1em;
+      margin: 10px 0;
+    }
+
+    select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+
+    input[type="submit"] {
+      @include button-style;
+      margin-top: 10px;
+    }
+  }
+
+  .alert.alert-success {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+}
+
+/* PAGE AJOUTER PLANNING ADMIN  */
+
+.AjouterPlanning{
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  form{
+    display: grid;
+    grid-gap: 15px;
+    label {
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+   
+    input:focus {
+      border-color: #480303;
+    }
+    
+    /* Style du bouton */
+    input[type="submit"] {
+      background-color:#480303;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+    
+  }
+  strong {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #28a745;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+/********** AFFICHER LES MEMBRES PAGE ADMIN  *********/
+.tableau-membres{
+  h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    thead th {
+      background-color: #480303;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+    }
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      padding: 10px;
+    }
+    .remove {
+      color: #dc3545;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .remove:hover {
+      color: #a71d2a;
+    }
+  }
+  
+}
+  
+/************* PAGE LOGIN ADMIN *******/
+.containre{
+  
+  background-color: #590505;
+  .loginAdmin{
+  
+      display: flex;
+      justify-content: center;
+      height: 400px;
+      text-align: center;
+      font-family:'Courier New', Courier, monospace;
+  
+  
+          .reponse{
+    strong{
+         color: #910707;
+         text-align: center;
+         font-size: 18px;
+         padding-bottom: 3px;
+         }
+        }
+
+        form{
+            margin-top: 30px;
+            background-color: #c2a8a8;
+            border-radius:$border-radius;
+            height: 330px;
+            width: 500px;
+            line-height: 1.8em;
+            font-size: 18px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px ;
+            
+             
+        input{
+            width: 200px;
+            height: 30px;
+            margin-right:20px;
+            align-items: center;
+              }
+              h1{
+                padding-top: 20px;
+              }
+        .inputs{
+               .inline-label{
+                display:inline-block;
+                width: 80px;
+                margin-right:30px;
+               }
+              }
+                button{
+                  margin-top: 15px;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-size: 15px;
+                  font-weight: bold;
+                  text-align: center;
+                  text-decoration: none;
+                  cursor: pointer;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #1b1c1b; 
+                  color: #fff; 
+                  transition: background-color 0.3s ease; 
+                  &:hover    {
+                    background-color: #590505; /* Nouvelle couleur de fond au survol */
+                        }
+                          
+              &:focus {
+                  outline: none; /* Supprime la bordure de mise au point par défaut */
+              }
+                }
+                
+                
+  
+              }
+      .text-center a{
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #1b1c1b; 
+                color: #fff; 
+                transition: background-color 0.3s ease; 
+
+&:hover    {
+      background-color: #590505; /* Nouvelle couleur de fond au survol */
+          }
+            
+&:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+}
+  
+                    }
+          }
+}
+
+/*************** FOOTER **********************************/
+footer {
+  background-color: #060606;
+  
+
+
+.footerContent {
+  width: 100%;
+  padding: 70px 30px 20px;
+
+  .socialIcons {
+      display: flex;
+      justify-content: center;
+
+      a {
+          text-decoration: none;
+          padding: 10px;
+          background-color: white;
+          margin: 10px;
+          border-radius: 30%;
+      }
+
+      a i {
+          color: #121111;
+          font-size: 40px;
+      }
+
+      a:hover {
+          background-color: #121111;
+          transition: 0.5s;
+      }
+
+      a:hover i {
+          color: white;
+          transition: 0.5s;
+      }
+  }
+
+  .footerNav ul {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+  }
+
+  .footerNav ul li a {
+      color: white;
+      margin: 20px;
+      text-decoration: none;
+      opacity: 0.7;
+  }
+
+  .footerNav ul li {
+      list-style: none;
+  }
+
+  .footerNav ul li a:hover {
+      opacity: 1;
+  }
+                  }
+
+.footerBottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: #fff;
+}
+
+ }
+
+/**********  PAGE PLANING PUBLIC ******/
+.planningPublic{
+
+  h2{
+    text-align: center;
+    color: #020202;
+    margin-top: 30px;
+
+  }
+
+.planning-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-top: 30px;
+  background-color: #c2a8a8;
+  margin-bottom: 30px;
+      
+  a{
+    background-color: #480303;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+     
+    &:hover{
+      background-color: #121111;
+      transition: 0.5s;
+
+    }
+     
+  }
+     
+  th ,td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #c2a8a8;
+  }
+}
+}
+
+/*********** section nos coachs page coachs ********/
+
+.containre-coachs{
+  background: #fafafb;
+        .nosCoachs{
+          padding: 40px 0;
+         
+          text-align: center;
+      .inner{
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+       
+
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+      .col{
+        flex: 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+        padding:15px;
+        .first-coach{
+          background-color: #c2a8a8;
+          padding: 30px;
+
+              img{
+            width: 150px;
+            height:150px;
+            border-radius: 50%; 
+          
+              }
+              .name{
+                font-size: 30px;
+              }
+                }
+           }
+
+     
+           }}
+          }
+           }
+
+
+/********* Section Galerie  Page coachs ***********/
+
+.Galerie{
+  position: relative;
+  min-height: 100vh;
+  background:#c2a8a8;
+
+
+  h1{
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+
+  }
+  .dream{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    justify-content: center;
+    padding: 10px;
+  }
+  .image{
+    height: 250px;
+    width: 350px;
+    border: 10px #fff;
+    box-shadow: 0 5px 15px rgb(0,0,0,1);
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
+      &:hover {
+        transform: scale(1.1);
+     }
+    }
+   
+}
+.poupin{
+  position: fixed;
+  top:0; left: 0;
+  background: rgb(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  span{
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor: pointer;
+    z-index: 100;
+  }
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width:750px;
+    object-fit: cover;
+  }
+}
+}
+/***********  SECTION NOS TARIF  PAGE ***********/
+.Nos-tarifs {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c2a8a8;
+  color: #333;
+  text-align: center;
+  
+     li{
+       font-size: 20px;
+     }
+  h1 {
+      color: black;
+      margin-bottom: 70px;
+      font-size: 20px;
+  }
+
+  h2 {
+      
+      color: black;
+     padding-top: 20px;
+      font-size: 30px;
+  }
+
+  p {
+      
+      line-height: 3;
+      font-size: 20px;
+  }
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%; /* Ajustez la largeur du tableau selon vos besoins */
+    height: 200px;
+    font-size:5px;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 30px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+  img {
+      width: 400px;
+      height: auto;
+      margin-top: 10px;
+  }
+
+  a {
+      font-size: 30px;
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      background-color: $text-color;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      background-color: #480303;
+      
+      &:hover {
+        background-color: #000000;
+          
+      }
+    }
+  }
+
+
+
+
+
+/************* login page  ***************/
+
+.containre{
+  @keyframes shakeAnimation {
+    0% { transform: translateX(100); }
+    25% { transform: translateX(100px); }
+    50% { transform: translateX(40px); }
+    75% { transform: translateX(100px); }
+    100% { transform: translateX(0); }};
+     background-color: #590505;
+
+    .login{
+      animation: shakeAnimation 9.5s ease-in-out;
+      display: flex;
+      justify-content: center;
+      height: 400px;
+      text-align: center;
+      font-family:'Courier New', Courier, monospace;
+      
+      
+      .reponse{
+        strong{
+             color: #910707;
+             text-align: center;
+             font-size: 18px;
+             padding-bottom: 3px;
+             }
+            }
+    
+            form{
+                margin-top: 30px;
+               background-color: #c2a8a8;
+                border-radius:$border-radius;
+                height: 330px;
+                width: 500px;
+                line-height: 1.8em;
+                font-size: 18px;
+                border-radius: 6px;
+                box-shadow: 0 0 10px ;
+                
+                
+                 
+            input{
+                width: 200px;
+                height: 30px;
+                margin-right:110px;
+                  }
+                  h1{
+                    padding-top: 20px;
+                  }
+            .inputs{
+                   .inline-label{
+                    display:inline-block;
+                    width: 80px;
+                    margin-right:30px;
+                   }
+                  }
+                    button{
+                      margin-top: 15px;
+                      display: inline-block;
+                      padding: 10px 20px;
+                      font-size: 15px;
+                      font-weight: bold;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      border: none;
+                      border-radius: 5px;
+                      background-color: #1b1c1b; 
+                      color: #fff; 
+                      transition: background-color 0.3s ease; 
+                      &:hover    {
+                        background-color: #590505; /* Nouvelle couleur de fond au survol */
+                            }
+                              
+                  &:focus {
+                      outline: none; /* Supprime la bordure de mise au point par défaut */
+                  }
+                    }
+          
+          .text-center a{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #1b1c1b; 
+                    color: #fff; 
+                    transition: background-color 0.3s ease; 
+    
+    &:hover    {
+          background-color: #590505; /* Nouvelle couleur de fond au survol */
+              }
+                
+    &:focus {
+        outline: none; /* Supprime la bordure de mise au point par défaut */
+    }
+      
+                        }
+              }
+      }
+  }
+}
+
+/********************************** Styles  for tablets **********************************************/  
+/************************************************************************************************************/
+
+@media (min-width: 768px) and (max-width: 1023px){
+                 /***********  NAVBAR     ***********/
+
+  header{
+     position: relative;
+          video {
+                width: 100%;
+                 height: auto;
+                 display: block;
+                }
+
+       .overlay {
+                 position: absolute;
+                 top: 0;
+                 left: 0;
+                 right: 0;
+                 bottom: 0;
+                 color: #fff;
+                 font-size: 24px;             
+               .navbar{
+                      //  flex-direction: column;
+                       .logo{
+                         display: flex;
+                         justify-content: space-evenly;
+                         justify-content: center;
+                         
+                            img{
+                        width: 70px;
+                              }
+                       }
+                     .Nav-link{
+                       display: flex;
+                       justify-content: center;
+                           li{
+                             display: flex;
+                             justify-content: center;
+                             margin: 10px;
+                             margin-right: 0;
+                             margin-bottom: 10px;
+                             font-size: 30px;
+                             a{
+                               text-decoration: none;
+                               background-color: #480303;
+                               border-radius: 5px;
+                               color: #fff;
+                               
+                                  &:hover{
+                                 background-color: #fff;
+                                 color: #000000;
+                                   }
+                             }
+
+                             }
+                                   }
+
+
+                         }
+        
+                   }  
+
+       }
+
+/*************** FOOTER **********************************/
+footer {
+  background-color: #060606;
+  
+
+
+.footerContent {
+  width: 100%;
+  padding: 70px 30px 20px;
+
+  .socialIcons {
+      display: flex;
+      justify-content: center;
+
+      a {
+          text-decoration: none;
+          padding: 10px;
+          background-color: white;
+          margin: 10px;
+          border-radius: 30%;
+      }
+
+      a i {
+          color: #121111;
+          font-size: 40px;
+      }
+
+      a:hover {
+          background-color: #121111;
+          transition: 0.5s;
+      }
+
+      a:hover i {
+          color: white;
+          transition: 0.5s;
+      }
+  }
+
+  .footerNav ul {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+  }
+
+  .footerNav ul li a {
+      color: white;
+      margin: 20px;
+      text-decoration: none;
+      opacity: 0.7;
+  }
+
+  .footerNav ul li {
+      list-style: none;
+  }
+
+  .footerNav ul li a:hover {
+      opacity: 1;
+  }
+                  }
+
+.footerBottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: #fff;
+}
+
+}
+
+
+
+/**********  PAGE PLANING PUBLIC ******/
+
+.planningPublic{
+  h2{
+    text-align: center;
+    color: #020202;
+    margin-top: 30px;
+   
+    
+  }
+
+.planning-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+      
+  a{
+    background-color: #480303;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+     
+    &:hover{
+      background-color: #121111;
+      transition: 0.5s;
+
+    }
+     
+  }
+
+     
+  th ,td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+       
+  }
+  th {
+    background-color: #c2a8a8;
+  }
+  
+}
+
+}
+
+/********** boutton-formulaire page register et login **********/ 
+.register{
+     
+  background-color: #480303;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+                  .reponse{
+                          strong{
+                                color: #910707;
+                                text-align: center;
+                                padding-bottom: 6px;
+                                }}
+
+                  form{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #c2a8a8;
+                        height: 470px;
+                        width: 300px;
+                        padding: 10px;
+                        border-radius: 6px;
+                        box-shadow: 0 0 10px ;
+                    h2{
+                        text-align: center;
+                        font-size: 20px;
+                      }
+                      p{
+                        text-align: center;
+                        line-height: 1.5em;
+                        
+                      }
+                    hr{
+                      margin: 10px 0;
+                      height: 1px;
+                      background-color: #fff;
+                      }
+                    button{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #1b1c1b; 
+                    color: #fff; 
+                    transition: background-color 0.3s ease; 
+        
+          &:hover    {
+                  background-color: #590505; /* Nouvelle couleur de fond au survol */
+                      }
+                        
+        &:focus {
+                outline: none; /* Supprime la bordure de mise au point par défaut */
+        }
+                          }
+                      
+        .boutton-formulaire {
+          
+           a{ 
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #1b1c1b; 
+            color: #fff; 
+            transition: background-color 0.3s ease; 
+            }
+            a:hover {
+            background-color: #590505; /* Nouvelle couleur de fond au survol */
+            }
+                        
+            &:focus {
+            outline: none; /* Supprime la bordure de mise au point par défaut */
+                    }
+            
+                      }            
+           div{
+              display: flex;
+              flex-direction: column;
+              }
+           label{
+                    margin-bottom: 6px;
+                }
+          input{
+          margin-bottom: 5px;
+          padding: 5px;
+              }
+              
+            p{
+            margin-top: 30px;
+            }
+              
+                  }
+
+
+   .Formulaire{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+      }
+    }
+    
+
+
+.nabvarUser{
+
+nav {
+background-color: #480303;
+padding: 10px 0;
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+.logo{
+img{
+width:100px; 
+height: auto;
+margin-right: 10px; 
+}
+}  
+
+ul {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: space-around;
+ li {
+ margin: 0;
+             a {
+               text-decoration: none;
+               color: #fff;
+               font-size: 16px;
+               font-weight: bold;
+               padding: 10px;
+               border-radius: 5px;
+               transition: background-color 0.3s, color 0.3s;
+                 }
+                 a:hover {
+                   background-color: #480303;
+                   color: $text-color;
+                 }
+     }
+}
+}
+
+}
+
+
+
+/********** AFFICHER LES MEMBRES PAGE ADMIN  *********/
+.tableau-membres{
+  h2 {
+    font-family: $Police-title;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    thead th {
+      background-color: #480303;
+      color: #fff;
+      padding: 10px;
+      text-align: left;
+    }
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    td {
+      padding: 10px;
+    }
+    .remove {
+      color: #dc3545;
+      text-decoration: none;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    .remove:hover {
+      color: #a71d2a;
+    }
+  }
+  
+ 
+}
+
+ /********* Navbar Page Profil utilisateur ************/
+.nabvarUser{
+
+  nav {
+      background-color: #480303;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+        .logo{
+                img{
+                    width:100px; 
+                    height: auto;
+                    margin-right: 10px; 
+                   }
+                }  
+             
+              ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: space-around;
+                      li {
+                      margin: 0;
+                                  a {
+                                    text-decoration: none;
+                                    color: #fff;
+                                    font-size: 20px;
+                                    font-weight: bold;
+                                    padding: 10px;
+                                    border-radius: 5px;
+                                    transition: background-color 0.3s, color 0.3s;
+                                      }
+                                      a:hover {
+                                        background-color: #480303;
+                                        color: $text-color;
+                                      }
+                          }
+                    }
+          }
+    
+    }       
+       
+      
+      
+/***********   Section notre Histoire  PAGE HOME   ***********/
+.histoire-section{
+    /** Nesting **/ 
+                       background-color: #fff;
+                       padding: 100px 0;
+                      
+                                         .histoire-content
+                                          {
+                                           max-width: 800px;
+                                           margin: 0 auto;
+                                                        h1{
+                                                        font-family:$Police-title;
+                                                        font-size: 40px;
+                                                        text-align: center;
+                                                        padding-bottom: 20px;
+                                                        }
+                                                        p{
+                                                        font-size: 30px;
+                                                        line-height: 2.5em;
+                                                        font-family: $Police-texte;
+                                                        text-align: center;
+                                                        margin-left: 10px;
+                                                        margin-right: 10px;
+                            }
+                                                             
+                                          }
+          
+                                          
+                        }
+/***********  Section  Actualité  HOME PAGE ***********/
+.Actualite
+          {
+          background: #c2a8a8;
+           height:500px;
+           display: flex;
+           justify-content: space-evenly;
+          
+  //         // justify-content: space-evenly;
+   .club{
+                  img {
+                    padding-top: 60px;
+                    width: 300px;
+                    height: 300px;
+                    border-radius:5px;
+                      }
+                    a {
+                   background-color: #480303;;
+                  color: white;
+                   padding: 15px 20px;
+                  display: block;
+                   text-align: center;
+                   text-decoration: none; 
+                    margin-top: 30px;
+                     border-radius:$border-radius;
+                                          
+                         }
+                    a:hover{
+                    background-color: #121111;
+                      transition: 0.5s;
+                           }
+   }
+   .Reservation{
+    img {
+      padding-top: 60px;
+      width: 300px;
+      height: 300px;
+      border-radius:5px;
+        }
+      a {
+     background-color: #480303;;
+    color: white;
+     padding: 15px 20px;
+    display: block;
+     text-align: center;
+     text-decoration: none; 
+      margin-top: 30px;
+       border-radius:$border-radius;
+                            
+           }
+      a:hover{
+      background-color: #121111;
+        transition: 0.5s;
+             }
+
+   }
+
+          }
+
+
+
+/** Nesting **/
+/************   Section notre valeurs  PAGE HOME  ***********/
+ .valeurs-section 
+              {
+                 
+                  padding: 2px 0;
+                  text-align: center;
+                  line-height: 1em;
+                  font-size: 20px;
+                 
+                      .valeurs-content
+                                      {
+                                        display: flex;
+                                        flex-direction: column;
+                                        padding: 20px;
+                                      }
+                                              h2{
+                                                font-family: $Police-title;
+                                                line-height: 2.5em;
+                                                padding-bottom: 20px;
+                                                font-size: 40px;
+                                                }
+                                                p{
+                                                  margin-top: 20px;
+                                                  line-height: 2.5em;
+                                                  font-size: 30px;
+                                                  padding-right:20px;
+                                                  }
+                                                            
+
+
+
+
+                                  .right-content img 
+                                                {
+                                                width: 450px;                 
+                                                height: 500px;
+                                                border-radius: $border-radius;
+                                                }
+                }
+/********** Section notre Accompagnement PAGE HOME   *****/
+.Accompagnement-section
+            {
+              
+                padding: 2px 0;
+                text-align: center;
+                line-height: 2em;
+                font-size: 18px;
+          
+                    .Accompagnement-content
+                                          {
+                                          display: flex;
+                                          flex-direction: column-reverse;
+                                          padding: 20px;
+                                          text-align: center;
+                                          padding: 50px;
+                                           .notre-accompagnement{
+                                            h2{
+                                              font-family: $Police-title;
+                                               font-size: 40px;
+                                               padding-bottom: 10px;
+                                               margin-bottom: 10px;
+                                            }
+                                            p{
+                                             line-height: 2.5em;
+                                             font-size: 30px;
+                                             margin-bottom: 10px;
+                                            }
+                                           }
+                                                           
+                                          .left-content img   {
+                                            width: 450px;
+                                            padding: 20px;
+                                            height: 500px;
+                                            border-radius: $border-radius;
+                                          }              
+                                          }
+
+
+                                  
+    
+    
+                }
+  /*******  Section notre valeurs  HOME PAGE  **************/
+ .NosValeurs-section
+                    {
+               
+                padding: 2px 0;
+                text-align: center;
+                line-height: 2em;
+                font-size: 20px;
+
+
+                    .NosValeurs-content
+                             {
+                                  
+                              .notre-valeurs{         
+                                  padding: 20px;
+                                  text-align: center;
+                                  
+                                     h2
+                                   {
+                                    font-family: $Police-title;
+                                    font-size: 40px;
+                                   }
+                                    p{
+                                    line-height: 2.5em;
+                                    font-size: 30px;
+                                     padding: 30px;
+                                    }
+                                  }     
+                                  .right-content{
+                                      img{
+                                    width: 450px;
+                                    padding: 20px;
+                                    height: 500px;
+                                    border-radius: $border-radius;
+                                          }
+                                                  } 
+                                                        
+   
+                    }
+                  }
+
+/******************************  Page login Utilisateur   ********************/
+
+.containre{
+  background-color: #590505;
+      .login{
+        display: flex;
+        justify-content: center;
+         text-align: center;
+         padding-top: 20px;
+         height: 600px;
+          .reponse{
+    strong{
+         color: #910707;
+         text-align: center;
+         font-size: 18px;
+         padding-bottom: 3px;
+         }
+        }
+
+        form{
+            
+            padding-top:30px;
+            background-color: #c2a8a8;
+            border-radius:$border-radius;
+            height: 400px;
+            width: 300px;
+            line-height: 1.8em;
+            font-size: 18px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px ;
+            
+            
+             
+        input{
+            width: 200px;
+            height: 30px;
+            text-align: center;
+         
+              }
+              h1{
+                padding-top: 20px;
+                font-size: 20px;
+              }
+        .inputs{
+               .inline-label{
+                display:inline-block;
+                width: 80px;
+                margin-right:30px;
+               }
+              }
+                button{
+                  margin-top: 15px;
+                  display: inline-block;
+                  padding: 10px 20px;
+                  font-size: 10px;
+                  font-weight: bold;
+                  text-align: center;
+                  text-decoration: none;
+                  cursor: pointer;
+                  border: none;
+                  border-radius: 5px;
+                  background-color: #1b1c1b; 
+                  color: #fff; 
+                  transition: background-color 0.3s ease; 
+                  &:hover    {
+                    background-color: #590505; /* Nouvelle couleur de fond au survol */
+                        }
+                          
+              &:focus {
+                  outline: none; /* Supprime la bordure de mise au point par défaut */
+              }
+                }
+                
+                
+  
+              }
+      .text-center a{
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background-color: #1b1c1b; 
+                color: #fff; 
+                transition: background-color 0.3s ease; 
+
+&:hover    {
+      background-color: #590505; /* Nouvelle couleur de fond au survol */
+          }
+            
+&:focus {
+    outline: none; /* Supprime la bordure de mise au point par défaut */
+}
+  
+                    }
+          }
+/************* PAGE LOGIN ADMIN *******/
+.containre{
+  
+      background-color: #590505;
+      .loginAdmin{
+      
+          display: flex;
+          justify-content: center;
+          height: 400px;
+          text-align: center;
+          font-family:'Courier New', Courier, monospace;
+      
+      
+              .reponse{
+        strong{
+             color: #910707;
+             text-align: center;
+             font-size: 18px;
+             padding-bottom: 3px;
+             }
+            }
+    
+            form{
+                margin-top: 30px;
+                background-color: #c2a8a8;
+                border-radius:$border-radius;
+                height: 330px;
+                width: 500px;
+                line-height: 1.8em;
+                font-size: 18px;
+                border-radius: 6px;
+                box-shadow: 0 0 10px ;
+                
+                 
+            input{
+                width: 200px;
+                height: 30px;
+                margin-right:20px;
+                align-items: center;
+                  }
+                  h1{
+                    padding-top: 20px;
+                  }
+            .inputs{
+                   .inline-label{
+                    display:inline-block;
+                    width: 80px;
+                    margin-right:30px;
+                   }
+                  }
+                    button{
+                      margin-top: 15px;
+                      display: inline-block;
+                      padding: 10px 20px;
+                      font-size: 15px;
+                      font-weight: bold;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      border: none;
+                      border-radius: 5px;
+                      background-color: #1b1c1b; 
+                      color: #fff; 
+                      transition: background-color 0.3s ease; 
+                      &:hover    {
+                        background-color: #590505; /* Nouvelle couleur de fond au survol */
+                            }
+                              
+                  &:focus {
+                      outline: none; /* Supprime la bordure de mise au point par défaut */
+                  }
+                    }
+                    
+                    
+      
+                  }
+          .text-center a{
+                    display: inline-block;
+                    padding: 10px 20px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: #1b1c1b; 
+                    color: #fff; 
+                    transition: background-color 0.3s ease; 
+    
+    &:hover    {
+          background-color: #590505; /* Nouvelle couleur de fond au survol */
+              }
+                
+    &:focus {
+        outline: none; /* Supprime la bordure de mise au point par défaut */
+    }
+      
+                        }
+              }
+  }
+
+
+
+
+  /*********** section nos coachs page coachs ********/
+
+  @mixin button-style {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+  
+  // Styles for .makeReservation
+  .makeReservation {
+    min-height: 100vh;
+   background:url(../images/blocco-fighter.png) center/cover no-repeat; 
+    color: rgb(8, 8, 8);
+    padding: 20px;
+    text-align: center;
+  
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+  
+    
+  
+    form {
+      background-color: $form-background-color;
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%; // Ajustez la largeur selon vos besoins
+      margin: 0 auto; // Pour centrer le formulaire
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      label {
+        font-size: 1em;
+        margin: 10px 0;
+      }
+  
+      select {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+      }
+  
+      input[type="submit"] {
+        @include button-style;
+        margin-top: 10px;
+      }
+    }
+  
+    .alert.alert-success {
+      background-color: $primary-color;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+  }
+  
+
+.containre-coachs{
+  background: #fafafb;
+        .nosCoachs{
+          padding: 40px 0;
+         
+          text-align: center;
+      .inner{
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+       
+
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      
+      .col{
+        flex: 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+        padding:15px;
+        .first-coach{
+          background-color: #c2a8a8;
+          padding: 30px;
+
+              img{
+            width: 150px;
+            height:150px;
+            border-radius: 50%; 
+          
+              }
+              .name{
+                font-size: 30px;
+              }
+        
+
+      }
+     }
+}
+     }}}
+
+/********* Section Galerie  Page coachs ***********/
+
+
+.Galerie{
+  position: relative;
+  min-height: 100vh;
+  background:#c2a8a8;
+
+
+  h1{
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+
+  }
+  .dream{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+    justify-content: center;
+    padding: 10px;
+  }
+  .image{
+    height: 250px;
+    width: 350px;
+    border: 10px #fff;
+    box-shadow: 0 5px 15px rgb(0,0,0,1);
+    overflow: hidden;
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: .2s linear;
+      &:hover {
+        transform: scale(1.1);
+     }
+    }
+   
+}
+.poupin{
+  position: fixed;
+  top:0; left: 0;
+  background: rgb(0,0,0,.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  span{
+    position: absolute;
+    top:0; right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color:#fff;
+    cursor: pointer;
+    z-index: 100;
+  }
+  img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width:750px;
+    object-fit: cover;
+  }
+}
+};
+
+  
+/************* formulaire Page change mot de passe ******/
+body{
+  
+  
+.changePassword{
+  background: url('../images/blocco-fighter.png') center center fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+        
+  
+          .form-change-password{
+            
+         display: flex;
+         justify-content: center;
+                      .reponse{
+                          strong{
+                          color: #070707;
+                                p {
+                          text-align: center;
+                                  }
+                  }
+                              }
+            form{
+               margin-top:100px;
+               display: flex;
+               flex-direction: column;
+               background-color: #c2a8a8;
+               height: 220px;
+               width: 300px;
+               padding: 10px;
+               border-radius: 6px;
+               box-shadow: 0 0 10px ;
+              input{
+                  line-height: 1.5em;
+                  margin-bottom: 10px;
+                  margin-top: 10px;
+                             }
+                                
+              p{
+              text-align: center;
+              line-height: 1.5em;
+    
+                }
+
+                button{
+                      display: inline-block;
+                      padding: 10px 20px;
+                      font-size: 18px;
+                      font-weight: bold;
+                      text-align: center;
+                      text-decoration: none;
+                      cursor: pointer;
+                      border: none;
+                      border-radius: 5px;
+                      background-color: #1b1c1b; 
+                      color: #fff; 
+                      transition: background-color 0.3s ease; 
+
+                  &:hover    {
+                  background-color: #590505; /* Nouvelle couleur de fond au survol */
+                            }
+    
+                      &:focus {
+                        outline: none; /* Supprime la bordure de mise au point par défaut */
+                              }
+                          }
+}
+}
+
+ }
+}
+    }
+
+
+
+ /***********  SECTION NOS TARIF  PAGE ***********/
+
+ .Nos-tarifs {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #c2a8a8;
+  color: #333;
+  text-align: center;
+  
+
+  h1 {
+      color: #080808;
+      margin-bottom: 70px;
+  }
+
+  h2 {
+     padding-top: 40px;
+      color: #060606;
+   
+      font-size: 20px;
+  }
+
+  p {
+     
+      line-height: 3;
+      font-size: 20px;
+  }
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    max-width: 100%;
+    height: 200px;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+  img {
+      width: 300px;
+      height: auto;
+      margin-top: 10px;
+  }
+
+  a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+      background-color: #480303;
+    
+      &:hover {
+          background-color: #1b1c1b;
+      }
+  }
+}
+video {
+  width: 100%; /* Ajustez cette ligne pour occuper toute la largeur */
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 24px;
+}
+/* PAGE AJOUTER PLANNING ADMIN  */
+
+.AjouterPlanning{
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  form{
+    display: grid;
+    grid-gap: 15px;
+    label {
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+    }
+   
+    input:focus {
+      border-color: #480303;
+    }
+    
+    /* Style du bouton */
+    input[type="submit"] {
+      background-color:#480303;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: black;
+    }
+    
+  }
+  strong {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #28a745;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+    
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultez et gérez votre profil utilisateur à la Salle de Boxe RED STAR . Suivez votre progression, réservez des cours, et personnalisez votre expérience d'entraînement.">
+    <meta name="keywords" content="profil utilisateur, salle de boxe, suivi de progression, réservation de cours, personnalisation">
+    <title>Profil Admin | Salle de Boxe RED STAR </title>
+    <!--font awesome cd link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<title>Planning des Cours | Salle de Boxe RED STAR </title>
+<meta name="description" content="Consultez le planning des cours de la Salle de Boxe RED STAR et planifiez votre entraînement. Découvrez nos cours de boxe adaptés à tous les niveaux.">
+    <meta name="keywords" content="planning cours, salle de boxe, entraînement, boxe, cours de boxe">
+    <div class="nabvarUser">
+      <nav>
+      <div class="logo">
+        <img src="./images/LOGO.png" alt="Logo club de boxe RED STAR ">
+        </div>
+        <ul>
+          <li><a href="/home" class="nav-item" style="--i: 0">Home</a></li>
+          <li><a href="/planningAjouterAdmin" class="nav-item" style="--i: 0"> Ajouter au Planning</a></li>
+          <li><a href="profilAdmin" class="nav-item" style="--i: 2">Profil</a></li>
+          <li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Se déconnecter</a></li>
+  
+        </ul>
+      </nav>
+<body>
+ 
+  <div class="instructeur">
+    <ul>
+      <li>instructeur 6 : mourad louhichi  </li>
+     <li>instructeur 7 : macaire  alex </li> 
+     
+    </ul>
+  
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>JOUR</th>
+      <th>HEURE DEBUT</th>
+      <th>HEURE FIN</th>
+      <th>Nom de l'instructeur</th>
+     <th>Prénom de l'instructeur</th>
+      <th>TYPE COURS</th>
+      <th>Actions</th>
+    </tr>
+    <% for(let i=0; i < planning.length; i++) { %>
+      
+        <tr>
+          <td><%= planning[i].ID %></td>
+          <td><%= planning[i].JOUR %></td>
+          <td><%= planning[i].HEURE_DEBUT %></td>
+          <td><%= planning[i].HEURE_FIN %></td>
+          <td><%= planning[i].Instructeur_Nom %></td>
+          <td><%= planning[i].Instructeur_Prénom %></td>
+          <td><%= planning[i].TYPE_COURS %></td>
+         
+          <td><a href="/updatePlanning/<%= planning[i].ID %>">Modifier</a></td> 
+         
+          <td><a  href="/deleteCompletePlanning/<%= planning[i].ID %>">Supprimer la ligne complète</a></td>
+      
+      </tr>
+    <% }; %>
+  </table>
+  <div class="planning-container">
+   
+
+  
+  
+   

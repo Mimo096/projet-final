@@ -1,0 +1,32 @@
+
+
+<h1>Ajouter un Instructeur</h1>
+
+<!-- Formulaire pour ajouter un instructeur -->
+<form action="/ajouterInstructeur" method="POST">
+
+  <label for="nom">Nom de l'instructeur</label>
+  <input type="text" name="NOM" required>
+  <label for="prenom">Prénom de l'instructeur</label>
+  <input type="text" name="PRÉNOM" required>
+  <label for="telephone">Numéro de téléphone de l'instructeur</label>
+  <input type="text" name="NUMERO_TELEPHONE" required>
+  
+
+  <button type="submit">Ajouter Instructeur</button>
+</form>
+
+
+<!-- Liste des instructeurs avec options de suppression -->
+<ul>
+  <% for (let i = 0; i < instructeurs.length; i++) { %>
+    <li>
+      <%= instructeurs[i].NOM %> <%= instructeurs[i].PRÉNOM %> -
+      Numéro de téléphone : <%= instructeurs[i].NUMERO_TELEPHONE %>
+      <form action="/supprimerInstructeur" method="POST" style="display: inline;">
+        <input type="hidden" name="id" value="<%= instructeurs[i].ID %>">
+        <button type="submit">Supprimer</button>
+      </form>
+    </li>
+  <% } %>
+</ul>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PAGE RÉSERVATION - RED STAR BOXING </title>
+	<!--font awesome cd link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=DM+Sans:wght@200&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+	<!--custom css file link -->
+	<link rel="stylesheet" href="/css/style.css">
+
+<section class="makeReservation">
+
+<h1>Réserver votre séance de coaching sportif</h1>
+
+
+  
+
+<form action="/makeReservation" method="POST">
+  <!-- Champs caché pour stocker l'id du membre -->
+  <input type="hidden" name="id_member" value="<%= id_member %>" />
+
+
+
+  <label for="jour_reservation">Choisir un jour de réservation :</label>
+  <select name="jour_reservation" required>
+    <% for (let i = 0; i < disponibilites.length; i++) { %>
+      <option value="<%= disponibilites[i].JOUR %>"><%= disponibilites[i].JOUR %></option>
+    <% } %>
+  </select>
+
+  <label for="HEURE_DEBUT">Choisir l'heure de début :</label>
+  <select name="HEURE_DEBUT" required>
+    <% for (let i = 0; i < disponibilites.length; i++) { %>
+      <option value="<%= disponibilites[i].HEURE_DEBUT %>"><%= disponibilites[i].HEURE_DEBUT %></option>
+    <% } %>
+  </select>
+
+  <label for="HEURE_FIN">Choisir l'heure de fin :</label>
+  <select name="HEURE_FIN" required>
+    <% for (let i = 0; i < disponibilites.length; i++) { %>
+      <option value="<%= disponibilites[i].HEURE_FIN %>"><%= disponibilites[i].HEURE_FIN %></option>
+    <% } %>
+  </select>
+
+  <input type="submit" value="Réserver">
+
+</form>
+<% if (typeof successMessage !== 'undefined' && successMessage) { %>
+  <div class="alert alert-success">
+    <%= successMessage %>
+  </div>
+<% } %>
+</div>
+
+</section>

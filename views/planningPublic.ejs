@@ -1,0 +1,43 @@
+<%- include('header') %>
+
+<body class="planningPublic">
+
+
+  <table class="planning-table">
+    <h2> Planning</h2>
+    <thead>
+      
+      <tr>
+       
+        <th>JOUR</th>
+        <th>HEURE DEBUT</th>
+        <th>HEURE FIN</th>
+        <th>Prénom de l'instructeur</th>
+        <th>TYPE COURS</th>
+        <th>Actions</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let i = 0; i < planning.length; i++) { %>
+        <tr>
+          
+          <td><%= planning[i].JOUR %></td>
+          <td><%= planning[i].HEURE_DEBUT %></td>
+          <td><%= planning[i].HEURE_FIN %></td>
+          <td><%= planning[i].Instructeur_Prénom %></td>
+          <td><%= planning[i].TYPE_COURS %></td>
+        
+        <td>
+          <a href="/reservation/<%= planning[i].ID %>">Réserver</a>
+        </td>
+      <% }; %>
+    </tbody>
+  
+
+</table>
+</body>
+</html>
+
+
+<%- include('footer') %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tableau des Réservations</title>
+</head>
+<body>
+  <h1>Tableau des Réservations</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Jour</th>
+        <th>Heure de début</th>
+        <th>Coach</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% reservations.forEach((reservation) => { %>
+        <tr>
+          <td><%= reservation.jour %></td>
+          <td><%= reservation.heure_debut %></td>
+          <td><%= reservation.coach %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</body>
+</html>

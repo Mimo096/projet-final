@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultez et gérez votre profil utilisateur à la Salle de Boxe RED STAR . Suivez votre progression, réservez des cours, et personnalisez votre expérience d'entraînement.">
+    <meta name="keywords" content="profil utilisateur, salle de boxe, suivi de progression, réservation de cours, personnalisation">
+    <title>Profil Admin | Salle de Boxe RED STAR </title>
+    <!--font awesome cd link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+<div class="nabvarUser">
+    <nav>
+    <div class="logo">
+        <img src="./images/LOGO.png" alt="Logo club de boxe RED STAR ">
+      </div>
+        <ul>
+            <li><a href="./home">Home</a></li>
+            <li><a href="Planning">Planning</a></li>
+            <li><a href="profilAdmin" class="nav-item" style="--i: 2">Profil</a></li>
+            <li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Déconnexion</a></li>
+            
+           
+        </ul>
+    </nav>
+
+    <div class="AjouterPlanning">
+
+<form action="/planningAjouterAdmin" method="post">
+    <label for="jour">Jour :</label>
+    <input type="text" name="jour" id="jour">
+  
+    <label for="heureDebut">Heure de début :</label>
+    <input type="text" name="heureDebut" id="heureDebut">
+  
+    <label for="heureFin">Heure de fin :</label>
+    <input type="text" name="heureFin" id="heureFin">
+  
+    <label for="instructeur">Instructeur :</label>
+    <input type="text" name="instructeur" id="instructeur">
+
+    <label for="typeCours">Type de cours :</label>
+    <input type="text" name="typeCours" id="typeCours">
+  
+    <input type="submit" value="Ajouter au planning">
+  </form>
+
+
+<% if(locals.message) { %>
+    <strong>
+        <%= message %>
+    </strong>
+    <% } %>
+    </div>

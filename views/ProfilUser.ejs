@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultez et gérez votre profil utilisateur à la Salle de Boxe RED STAR . Suivez votre progression, réservez des cours, et personnalisez votre expérience d'entraînement.">
+    <meta name="keywords" content="profil utilisateur, salle de boxe, suivi de progression, réservation de cours, personnalisation">
+    <title>Profil Utilisateur | Salle de Boxe RED STAR </title>
+    <!--font awesome cd link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+
+<div class="nabvarUser">
+    <nav>
+    <div class="logo">
+        <img src="./images/LOGO.png" alt="Logo club de boxe RED STAR ">
+      </div>
+        <ul>
+            <li><a href="./home">Home</a></li>
+            <li><a href="./changePassword">Paramètres</a></li>
+            <li><a href="./reservation">Réservation</a></li> 
+            <li><a href="LogoutUser">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+</div>
+<div class="userProfil">
+    <h2>Hello <%= nom %>  <%= prenom %></h2>
+</div>
+
+    
+
+    
+
+
+
+    <%- include('footer') -%>
+
+</body>

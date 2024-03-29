@@ -1,0 +1,106 @@
+
+
+<%- include ('header') -%>
+
+<title>Rencontrez Nos Coachs Sportifs de Boxe - Red Star Boxing</title>
+<meta name="description" content="Découvrez notre équipe exceptionnelle de coachs sportifs de boxe chez Red Star Boxing. Rencontrez les experts qui vous guideront vers le succès sur le ring.">
+
+
+	<!--Section of  nosCoachs  -->
+<div class="containre-coachs">
+<div class="nosCoachs">
+    <div class="inner">
+        <h1>Guidés par les Meilleurs Coachs</h1>
+        <div class="border"></div>
+        <div class="row">
+            <div class="col">
+                <div class="first-coach">
+                    <img src="/images/Coach1.jpg" alt="" srcset="">
+                    <div class="name">full name</div>
+                    <div class="star">
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit, dicta quisquam, sit dolorum quasi deleniti eveniet fugit cupiditate adipisci doloremque minima. Cumque id ducimus nulla magni hic deserunt odit?</p>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="first-coach">
+                    <img src="/images/Coach1.jpg" alt="" srcset="">
+                    <div class="name">full name</div>
+                    <div class="star">
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit, dicta quisquam, sit dolorum quasi deleniti eveniet fugit cupiditate adipisci doloremque minima. Cumque id ducimus nulla magni hic deserunt odit?</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="col">
+                <div class="first-coach">
+                    <img src="/images/Coach1.jpg" alt="" srcset="">
+                    <div class="name">full name</div>
+                    <div class="star">
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                        <i class="fa-sharp fa-solid fa-star" style="color: #f0c800;"></i>
+                    </div>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae suscipit, dicta quisquam, sit dolorum quasi deleniti eveniet fugit cupiditate adipisci doloremque minima. Cumque id ducimus nulla magni hic deserunt odit?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------- SECTION  GALERIE IMAGES  ------------->  
+
+<div class="Galerie">
+    <h1>Notre Club en Images</h1>
+    
+    <div class="dream">
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+        <div class="image"><img src="/images/blocco-fighter.png" alt="" srcset=""></div>
+    </div>
+
+    <div class="poupin">
+        <span>&times;</span>
+        <img src="/images/blocco-fighter.png" alt="" srcset="">
+    </div>
+</div>
+
+<script nonce="<%= nonce %>">
+    document.addEventListener('DOMContentLoaded', function() {
+        // Sélectionner toutes les images à l'intérieur de l'élément ayant la classe '.dream'
+        const images = document.querySelectorAll('.dream img');
+
+        // Ajoutez un gestionnaire d'événements à chaque image
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                // code à exécuter lors du clic
+                document.querySelector('.poupin').style.display = "block";
+                document.querySelector('.poupin img').src = image.getAttribute('src') ;
+
+            });
+        });
+    });
+
+    document.querySelector('.poupin span').onclick=()=>{
+        document.querySelector('.poupin').style.display = "none";
+    }
+</script>
+
+</div>
+<%- include ('footer') -%>
