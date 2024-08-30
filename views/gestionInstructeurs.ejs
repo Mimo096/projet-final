@@ -1,32 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ajouter instructeur //  Administrateur | Salle de Boxe RED STAR </title>
+    <meta name="description" content="Gérez les paramètres et les fonctionnalités administratives de la Salle de Boxe RED STAR à partir de votre profil administrateur. Accédez aux outils d'administration pour superviser les membres et personnaliser l'expérience utilisateur.">
+    <meta name="keywords" content="profil administrateur, salle de boxe, gestion administrative, outils d'administration, supervision des membres">
+	<!--font awesome cd link  -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+	<!--custom css file link -->
+	<link rel="stylesheet" href="/css/style.css">
+
+  <body>
+
+    <div class="nabvarUser">
+      <nav>
+      <div class="logo">
+        <!-- Icon gear -->
+        <i class="fa-solid fa-gear" style="font-size: 100px; color:brown"></i>
+        
+        </div>
+           
+        
+       
+        
+        <ul>
+          <li><a href="/home" class="nav-item" style="--i: 0">Home</a></li>
+          <li><a href="/Planning" class="nav-item" style="--i: 0"> Planning</a></li>
+          <li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Se déconnecter</a></li>
+                  
+        </ul>
+      </nav>
+    
+    </div>
+  
+  
+
+
 
 
 <h1>Ajouter un Instructeur</h1>
 
 <!-- Formulaire pour ajouter un instructeur -->
 <form action="/ajouterInstructeur" method="POST">
-
-  <label for="nom">Nom de l'instructeur</label>
-  <input type="text" name="NOM" required>
-  <label for="prenom">Prénom de l'instructeur</label>
-  <input type="text" name="PRÉNOM" required>
-  <label for="telephone">Numéro de téléphone de l'instructeur</label>
-  <input type="text" name="NUMERO_TELEPHONE" required>
-  
-
-  <button type="submit">Ajouter Instructeur</button>
+    <table>
+        <tr>
+            <td><label for="nom">Nom de l'instructeur</label></td>
+            <td><input type="text" name="NOM" required></td>
+        </tr>
+        <tr>
+            <td><label for="prenom">Prénom de l'instructeur</label></td>
+            <td><input type="text" name="PRÉNOM" required></td>
+        </tr>
+        <tr>
+            <td><label for="telephone">Numéro de téléphone de l'instructeur</label></td>
+            <td><input type="text" name="NUMERO_TELEPHONE" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button type="submit">Ajouter Instructeur</button>
+            </td>
+        </tr>
+    </table>
 </form>
 
-
 <!-- Liste des instructeurs avec options de suppression -->
-<ul>
-  <% for (let i = 0; i < instructeurs.length; i++) { %>
-    <li>
-      <%= instructeurs[i].NOM %> <%= instructeurs[i].PRÉNOM %> -
-      Numéro de téléphone : <%= instructeurs[i].NUMERO_TELEPHONE %>
-      <form action="/supprimerInstructeur" method="POST" style="display: inline;">
-        <input type="hidden" name="id" value="<%= instructeurs[i].ID %>">
-        <button type="submit">Supprimer</button>
-      </form>
-    </li>
-  <% } %>
-</ul>
+<h2>Liste des Instructeurs</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Numéro de téléphone</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (let i = 0; i < instructeurs.length; i++) { %>
+        <tr>
+            <td><%= instructeurs[i].NOM %></td>
+            <td><%= instructeurs[i].PRÉNOM %></td>
+            <td><%= instructeurs[i].NUMERO_TELEPHONE %></td>
+            <td>
+                <form action="/supprimerInstructeur" method="POST" style="display: inline;">
+                    <input type="hidden" name="id" value="<%= instructeurs[i].ID %>">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+        <% } %>
+    </tbody>
+</table>
+
+</body>
+</html>

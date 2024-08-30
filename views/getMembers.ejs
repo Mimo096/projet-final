@@ -16,32 +16,34 @@
 
 
 
-<div class="tableau-membres">
-<h2>liste des Members</h2>
-
-<table>
-    <thead>
-        <th>NOM PRÉNOM</th>
-        <th>ADRESSE EMAIL</th>
-    </thead>
-    <tbody>
-    <% for (let i=0; i < members.length; i++) { %>
-        <tr>
-            <td>
-             <%= members[i].NOM_UTILISATEUR %>
-            </td>
-            <td>
-             <%= members[i].EMAIL %>
-            <td>
-                <td>
-                    <a class="remove" href="delete_members/<%=members[i].id%>"><i class="fa fa-remove"></i></a>
-                </td>
-            </tr>
-    
-    
-        <% } %>
-    </tbody>
-    </table>
-</div>
+    <div class="tableau-membres">
+        <h2>liste des Members</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>NOM PRÉNOM</th>
+                    <th>ADRESSE EMAIL</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% if (membres && membres.length) { %>
+                <% for (let i = 0; i < membres.length; i++) { %>
+                    <tr>
+                        <td><%= membres[i].NOM_UTILISATEUR %></td>
+                        <td><%= membres[i].EMAIL %></td>
+                        <td>
+                            <a class="remove" href="delete_members/<%= membres[i].id %>"><i class="fa fa-remove"></i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="3">Aucun membre trouvé</td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+        </div>
 
     

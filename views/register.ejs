@@ -48,40 +48,16 @@
 </form>
 
     
-<script nonce="<%= nonce %>">
-    function validerFormulaire() {
-        // Récupérer les valeurs des champs
-        var nomValue = document.getElementById("name").value;
-        var emailValue = document.getElementById("email").value;
-        var passwordValue = document.getElementById("password").value;
-        var passwordConfirmValue = document.getElementById("passwordConfirm").value;
-
-        // Vérifier si tous les champs sont remplis
-        if (nomValue.trim() === "" || emailValue.trim() === "" || passwordValue.trim() === "" || passwordConfirmValue.trim() === "") {
-            // Afficher un message d'erreur
-            alert("Veuillez remplir tous les champs.");
-            // Empêcher la soumission du formulaire
-            return false;
-        }
-
-        // Autres validations si nécessaire
-
-        // Si le formulaire est valide, autorisez la soumission
-        return true;
-    }
-</script>
-
-    
-
-
-    </section>
 
 
 
+<!-- Inclure le fichier JavaScript -->
+<script src="/js/formValidation.js"></script>
 
 </body>
 
 </html>
+</section>
 
 <%- include('footer') -%>
 

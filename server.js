@@ -3,12 +3,18 @@ import session from "express-session";
 import parseurl from "parseurl";
 import router from "./routes/router.js";
 import helmet from "helmet";
-import crypto from "crypto"
+ import crypto from "crypto"
 import dotenv from "dotenv";
+import methodeOverride from 'method-override';
 
+import { authMiddleware } from "./controllers/admin/adminControllers.js";
 
 const app = express();
+
+
 dotenv.config();
+
+
 const port = process.env.PORT;
 const hostname = "localhost";
 
@@ -18,7 +24,8 @@ export const BASE_URL = `http://${hostname}:${port}`;
 
 
 
-
+// Configurer method-override pour supporter PUT et DELETE dans les formulaires
+app.use(methodeOverride('_method'));
 
 
 
@@ -44,14 +51,14 @@ app.use(
 
 
   app.use(helmet());
-
+// Middleware pour générer le nonce
   app.use((req, res, next) => {
   // Générez un nonce unique pour chaque requête
-  const nonce = crypto.randomBytes(16).toString("base64");
-
-  // Configurez l'en-tête CSP avec le nonce généré
-  res.setHeader("Content-Security-Policy", `script-src 'self' 'nonce-${nonce}'`);
-
+  const nonce = crypto.randomBytes(16).toString("base64")
+  // Middleware pour les en-têtes CSP
+   res.setHeader("Content-Security-Policy", `script-src 'self'`);
+  
+  
 
   res.locals.nonce = nonce;
   // Poursuiver le traitement de la requête
@@ -67,28 +74,14 @@ app.set("views", "./views");
 app.set("view engine", "ejs");
 
 // pour l'utilisations du json a la réception des données formulaire //
+// Middleware pour analyser le JSON dans le corps des requêtes
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
 
 // protection des pages Admin //
-app.use((req,res,next)=>{
-
-	let pathname =parseurl(req).pathname.split('/');
-
-	let protectedPath = ["getMembers",];
-      
-	if(!req.session.ismember && protectedPath.indexOf(pathname[1]) !== -1){
-
-     res.redirect("/adminLogin") ;} // Redirection vers la page de connexion 
-
-	else{
-	next();
-	}
-});
-
-
-
+// Utilisez le middleware pour toutes les routes
+ app.use(authMiddleware);
 
 
 
@@ -96,8 +89,8 @@ app.use((req,res,next)=>{
 app.use((req,res,next)=>{
 
 	let pathname =parseurl(req).pathname.split('/');
-
-	let protectedPath = ["ProfilUser",]; // Ajouter d'autres URL protégées ici 
+	
+	let protectedPath = ["profilUser",]; // Ajouter d'autres URL protégées ici 
       
 	if(!req.session.ismember && protectedPath.indexOf(pathname[1]) !== -1){
 		res.locals.id_membre = req.session.userId;

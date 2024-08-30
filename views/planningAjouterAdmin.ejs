@@ -3,56 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consultez et gérez votre profil utilisateur à la Salle de Boxe RED STAR . Suivez votre progression, réservez des cours, et personnalisez votre expérience d'entraînement.">
+    <meta name="description" content="Consultez et gérez votre profil utilisateur à la Salle de Boxe RED STAR. Suivez votre progression, réservez des cours, et personnalisez votre expérience d'entraînement.">
     <meta name="keywords" content="profil utilisateur, salle de boxe, suivi de progression, réservation de cours, personnalisation">
-    <title>Profil Admin | Salle de Boxe RED STAR </title>
-    <!--font awesome cd link  -->
+    <title>Ajouter Planning | Salle de Boxe RED STAR</title>
+    <!--font awesome cd link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-
-<div class="nabvarUser">
+<div class="navbarUser">
     <nav>
-    <div class="logo">
-        <img src="./images/LOGO.png" alt="Logo club de boxe RED STAR ">
-      </div>
+        <div class="logo">
+            <img src="./images/LOGO.png" alt="Logo club de boxe RED STAR">
+        </div>
         <ul>
             <li><a href="./home">Home</a></li>
             <li><a href="Planning">Planning</a></li>
             <li><a href="profilAdmin" class="nav-item" style="--i: 2">Profil</a></li>
             <li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Déconnexion</a></li>
-            
-           
         </ul>
     </nav>
 
     <div class="AjouterPlanning">
-
-<form action="/planningAjouterAdmin" method="post">
-    <label for="jour">Jour :</label>
-    <input type="text" name="jour" id="jour">
-  
-    <label for="heureDebut">Heure de début :</label>
-    <input type="text" name="heureDebut" id="heureDebut">
-  
-    <label for="heureFin">Heure de fin :</label>
-    <input type="text" name="heureFin" id="heureFin">
-  
-    <label for="instructeur">Instructeur :</label>
-    <input type="text" name="instructeur" id="instructeur">
-
-    <label for="typeCours">Type de cours :</label>
-    <input type="text" name="typeCours" id="typeCours">
-  
-    <input type="submit" value="Ajouter au planning">
-  </form>
-
-
-<% if(locals.message) { %>
-    <strong>
-        <%= message %>
-    </strong>
-    <% } %>
+        <form action="/planningAjouterAdmin" method="post">
+            <label for="instructeur">Instructeur :</label>
+            <select name="instructeur" id="instructeur" required>
+                <% if (instructeurs && instructeurs.length) { %>
+                    <% instructeurs.forEach(function(instructeur) { %>
+                        <option value="<%= instructeur.ID %>"><%= instructeur.NOM %> <%= instructeur['PRÉNOM'] %></option>
+                    <% }); %>
+                <% } else { %>
+                    <option value="">Aucun instructeur disponible</option>
+                <% } %>
+            </select>
+    
+            <!-- Sélection du jour -->
+            <label for="jour">Jour :</label>
+            <select name="jour" id="jour" required>
+                <option value="Lundi">Lundi</option>
+                <option value="Mardi">Mardi</option>
+                <option value="Mercredi">Mercredi</option>
+                <option value="Jeudi">Jeudi</option>
+                <option value="Vendredi">Vendredi</option>
+                <option value="Samedi">Samedi</option>
+                <option value="Dimanche">Dimanche</option>
+            </select>
+    
+            <!-- Heure de début -->
+            <label for="heureDebut">Heure de début :</label>
+            <input type="time" name="heureDebut" id="heureDebut" value="17:00" required>
+    
+            <!-- Heure de fin -->
+            <label for="heureFin">Heure de fin :</label>
+            <input type="time" name="heureFin" id="heureFin" value="20:00" required>
+    
+            <!-- Type de cours -->
+            <label for="typeCours">Type de cours :</label>
+            <select name="typeCours" id="typeCours" required>
+                <option value="Boxe Anglaise Débutant">Boxe Anglaise Débutant</option>
+                <option value="Boxe Anglaise Intermédiaire">Boxe Anglaise Intermédiaire</option>
+                <option value="Boxe Anglaise Avancée">Boxe Anglaise Avancée</option>
+                <option value="Boxe pour Fitness">Boxe pour Fitness</option>
+                <option value="Boxe pour Enfants">Boxe pour Enfants</option>
+                <option value="Boxe pour Femmes">Boxe pour Femmes</option>
+                <option value="Boxe et Self-Défense">Boxe et Self-Défense</option>
+                <option value="Boxe Technique">Boxe Technique</option>
+                <option value="Sparring et Compétition">Sparring et Compétition</option>
+                <option value="Boxe et Renforcement">Boxe et Renforcement</option>
+            </select>
+    
+            <button type="submit">Ajouter le planning</button>
+        </form>
+    
+        <% if (message) { %>
+            <strong><%= message %></strong>
+        <% } %>
     </div>
+</div>
+
+</body>
+</html>

@@ -29,7 +29,8 @@
       </nav>
 <body>
  
-  <div class="instructeur">
+  <div class="tableau-membres">
+    
     <ul>
       <li>instructeur 6 : mourad louhichi  </li>
      <li>instructeur 7 : macaire  alex </li> 
@@ -37,6 +38,7 @@
     </ul>
   
   <table>
+    <thead>
     <tr>
       <th>ID</th>
       <th>JOUR</th>
@@ -47,6 +49,7 @@
       <th>TYPE COURS</th>
       <th>Actions</th>
     </tr>
+  </thead>
     <% for(let i=0; i < planning.length; i++) { %>
       
         <tr>
@@ -58,9 +61,9 @@
           <td><%= planning[i].Instructeur_Prénom %></td>
           <td><%= planning[i].TYPE_COURS %></td>
          
-          <td><a href="/updatePlanning/<%= planning[i].ID %>">Modifier</a></td> 
+         <td><button><a href="/updatePlanning/<%= planning[i].ID %>">Modifier</a></button> </td> 
          
-          <td><a  href="/deleteCompletePlanning/<%= planning[i].ID %>">Supprimer la ligne complète</a></td>
+          <td><button><a  href="/deleteCompletePlanning/<%= planning[i].ID %>">Supprimer la ligne </a></button></td>
       
       </tr>
     <% }; %>

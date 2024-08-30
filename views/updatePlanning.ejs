@@ -4,7 +4,11 @@
 <% if (planning && planning.ID) { %>
     <link rel="stylesheet" href="/css/style.css">
     <h1>Editez Planning</h1>
+  
     <form action="/updatePlanning/<%= planning.ID %>" method="POST">
+      
+       
+      
         <label>Jour du planning</label>
         <input type="text" name="JOUR" value="<%= planning.JOUR %>">
         <label>Heure de début</label>
@@ -16,7 +20,8 @@
         <label>Type de cours</label>
         <input type="text" name="TYPE_COURS" value="<%= planning.TYPE_COURS %>">
         <button type="submit">Mettre à jour</button>
-        <button><a href="/planning">Annuler les modifications</a></button> 
+        <button><a href="/planning">Annuler les modifications</a></button>
+     
     </form>
  
   </div>

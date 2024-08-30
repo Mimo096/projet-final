@@ -1,78 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Profil Administrateur | Salle de Boxe RED STAR </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Administrateur | Salle de Boxe RED STAR </title>
     <meta name="description" content="Gérez les paramètres et les fonctionnalités administratives de la Salle de Boxe RED STAR à partir de votre profil administrateur. Accédez aux outils d'administration pour superviser les membres et personnaliser l'expérience utilisateur.">
     <meta name="keywords" content="profil administrateur, salle de boxe, gestion administrative, outils d'administration, supervision des membres">
-	<!--font awesome cd link  -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-	<!--custom css file link -->
-	<link rel="stylesheet" href="/css/style.css">
-
-   
+    <!--font awesome cd link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <!--custom css file link -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
 
-	<div class="nabvarUser">
-		<nav>
-		<div class="logo">
-			<img src="./images/LOGO.png" alt="Logo club de boxe RED STAR ">
-		  </div>
-			<ul>
-				<li><a href="/home" class="nav-item" style="--i: 0">Home</a></li>
-				<li><a href="/Planning" class="nav-item" style="--i: 0"> Planning</a></li>
-				<li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Se déconnecter</a></li>
+    <div class="nabvarUser">
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-gear" style="font-size: 100px; color:brown"></i>
+            </div>
+            <ul>
+                <li><a href="/home" class="nav-item" style="--i: 0">Home</a></li>
+                <li><a href="/Planning" class="nav-item" style="--i: 0"> Planning</a></li>
+                <li><a href="LogoutAdmin" class="nav-item" style="--i: 2">Déconnexion </a></li>
                 <li><a href="/gestionInstructeurs" class="nav-item" style="--i: 2">Gestion des Instructeurs</a></li> 
-			</ul>
-		</nav>
-	
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Gestion des members</h1>
+
+      
 
 
+    <!-- Formulaire d'ajout de membre -->
+    <form action="/profilAdmin" method="POST">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
 
-	
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
 
-		<h1>PROFILE ADMIN</h1>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
 
-		<%- include('getMembers') -%>
+        <label for="passwordConfirm">Confirmer le mot de passe :</label>
+        <input type="password" id="passwordConfirm" name="passwordConfirm" required>
 
-			<section class="register">
+        <button type="submit">Ajouter le membre</button>
+    </form>
 
-				<form action="/profileAdmin" method="POST">
-					<h2>AJOUTER DES MEMBERS </h2>
-					<hr>
-					<div class="Formulaire">
-						<label for="name">Nom Prénom</label>
-						<input type="text" placeholder="Nom" id="name" name="name">
-
-
-					</div>
-					<label for="email"> Adresse Mail </label>
-					<input type="email" placeholder="Adresse-mail" id="email" name="email">
-
-
-					<label for="password">Mot de passe</label>
-
-					<input type="password" placeholder="mot de pasee" id="password" name="password">
-
-
-					<label for="passwordConfirm">Mot de passe</label>
-					<input type="password" id="passwordConfirm" name="passwordConfirm">
-
-					<button type="submit">Register</button>
-					<div class="text-center">
-
-
-					</div>
-				</form>
-				<% if(locals.message) { %>
-					<strong>
-						<%= message %>
-					</strong>
-					<% } %>
-
-				
+    <h2>Liste des members</h2>
+    <ul>
+        <% members.forEach(function(member) { %>
+            <li>
+                <%= member.NOM_UTILISATEUR %> - <%= member.EMAIL %>
+                <button class="delete-button" data-id="<%= member.id %>">Supprimer</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <script src="/js/members.js"></script>
 </body>
+
 </html>

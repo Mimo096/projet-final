@@ -1,178 +1,117 @@
 import express from "express";
 
+// Importation des contrôleurs
 
+// Contrôleurs Utilisateur
 import {
-	 registerSubmitAdmin,
-	 registerAdmin,
-	 AdminLogin,
-	 loginAdminSubmit,
-	 LogoutAdmin,
-	 AddPlanning,
-	 displayPlannigPublic,
-	
+  reservationSubmitCreaneau,
+  reservation,
+  tableauReservation,
+} from "../controllers/user/reservationControllers.js";
+import {
+  RegisterUserSubmit,
+  LoginSubmitUser,
+  LogoutUser,
+  changerPasword,
+  updatePassword,
+  AuthenticationUser,
+} from "../controllers/user/controllersUser.js";
 
-} from "../controllers/RegisterAdminControllers.js";
+// Contrôleurs Admin
 import {
-	RegisterUserSubmit,
-	Register,
-	LoginSubmitUser,
-	ProfilUser,
-	UserLogin,
-	LogoutUser,
-	changerPasword,
-	updatePassword,
-	errorPage,
-	TableauReservation,
-	ajouterPlannig
-} from "../controllers/RegisterUser.js";
+  AddUser,
+  DeletePost,
+  renderProfilAdmin,
+} from "../controllers/admin/userMangementController.js";
 import {
-	
-	DelePost,
-	getAllMembers,
-	AddUser,
-	home,
-	profilAdmin,
-	Contact,
-	NosTarif,
-	displayPlannig,
-	editPlanningSubmit,
-	editPlanning,
-	register,
-	nosCaoch,
-	pageError,
-	gestionInstructeurs,
-	supprimerInstructeur,
-	ajouterInstructeur,
-	reservationSubmitCreaneau,
-	reservation,
-	AuthenticationUser,
-	deleteCompletePlanning,
+  getAllMembers,
+} from "../controllers/admin/membersMangementControllers.js";
+import {
+  gestionInstructeurs,
+  supprimerInstructeur,
+  ajouterInstructeur,
+} from "../controllers/admin/instructorManagementController.js";
+import {
+  AddPlanning,
+  displayPlannigPublic,
+  editPlanning,
+  editPlanningSubmit,
+  deleteCompletePlanning,
+  displayPlannig,
+  showAddPlanningForm,
+} from "../controllers/admin/planningControllers.js";
+import {
+  registerSubmitAdmin,
+  loginAdminSubmit,
+  LogoutAdmin,
+} from "../controllers/admin/adminControllers.js";
 
-} from "../controllers/HomeControllers.js";
+// Contrôleurs Généraux (Home)
+import {
+  home,
+  Contact,
+  nosTarif,
+  register,
+  nosCaoch,
+  pageError,
+  userLogin,
+  errorPage,
+  Register,
+  profilUser,
+  Adminlogin,
+  registerAdmin,
+  ajouterPlannig,
+} from "../controllers/homeControllers.js";
 
 const router = express.Router();
 
-// ROUTER TOUTES LES PAGES  //
+// ROUTES GÉNÉRALES
 router.get("/home", home);
 router.get("/Contact", Contact);
-router.get("/NosTarif", NosTarif);
-router.get("/errorPage" ,errorPage);
-router.get("/planningAjouterAdmin",ajouterPlannig);
-router.get("/register",register);
-router.get("/ProfilUser",ProfilUser);
-router.get("/coachs",nosCaoch);
-router.get("/errorPage",pageError);
+router.get("/nosTarif", nosTarif);
+router.get("/coachs", nosCaoch);
+router.get("/errorPage", errorPage);
+router.get("/planningAjouterAdmin", ajouterPlannig);
 
-
-///////////////////////////////////////////
-
-
-// REGISTER ADMIN  SUBMIT//
-router.post("/registerAdmin", registerSubmitAdmin);
-// ROUTE PAGE REGISTER ADMIN //
-router.get("/registerAdmin", registerAdmin);
-
-// AUTHENTIFICATION SUBMIT  ADMIN //
-router.post("/adminLogin", loginAdminSubmit);
-// ROUTE ADMIN LOGIN //
-router.get("/adminLogin", AdminLogin);
-
-// ROUTE ADMINPROFIL //
-router.get("/getMembers", getAllMembers);
-router.get("/profilAdmin", profilAdmin);
-router.post("/profilAdmin", AddUser);
-
-
-// ROUTE DECONNEXION ADMIN //
-router.get("/LogoutAdmin", LogoutAdmin);
-// AJOUTER MEMBERS SUBMIT "ADMIN"
-
-// ROUTE DELETE MEMBRES  POST //
-
-router.get("/delete_members/:id/",DelePost);
-
-
-
-/////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
-
-// REGISTER USER SUBMIT //
+// ROUTES POUR LES UTILISATEURS
+router.get("/register", register);
 router.post("/register", RegisterUserSubmit);
-
-// ROUTER PAGE REGISTER USER //
-router.get("/register", Register);
-
-//AUTHENTIFICATION SUBMIT USER//
+router.get("/profilUser", profilUser);
+router.get("/login", userLogin);
 router.post("/login", LoginSubmitUser);
-
-// ROUTER PAGE  PROFIL USER //
-
-router.get("/ProfilUser", ProfilUser);
-
-// ROUTE PAGE LOIGN USER //
-router.get("/login", UserLogin);
-
-// ROUTE GET CHANGER PASSWORD //
-router.get("/changePassword",changerPasword);
-
-// ROUTE  POST CHANGER PASSWORD // 
-router.post("/updatePassword",updatePassword);
-
-// DECONNEXION USER //
 router.get("/LogoutUser", LogoutUser);
+router.get("/changePassword", changerPasword);
+router.put("/updatePassword", updatePassword);
 
-/////////////////////////////////////////
+// ROUTES POUR LES ADMINISTRATEURS
+router.get("/adminLogin", Adminlogin);
+router.post("/adminLogin", loginAdminSubmit);
+router.get("/registerAdmin", registerAdmin);
+router.post("/registerAdmin", registerSubmitAdmin);
+router.get("/LogoutAdmin", LogoutAdmin);
+router.get("/profilAdmin", renderProfilAdmin);
+router.post("/profilAdmin", AddUser);
+router.delete("/delete_members/:id", DeletePost);
+router.get("/getMembers", getAllMembers);
 
+// ROUTES POUR LA GESTION DES INSTRUCTEURS
+router.get("/gestionInstructeurs", gestionInstructeurs);
+router.post("/supprimerInstructeur", supprimerInstructeur);
+router.post("/ajouterInstructeur", ajouterInstructeur);
 
-///// /ROUTE GET TABLEAU RESERVATION /////////////
-router.get("/tableau-reservations", TableauReservation );
+// ROUTES POUR LA GESTION DU PLANNING
+router.get("/planningPublic", displayPlannigPublic);
+router.get("/planning", displayPlannig);
+router.get("/planningAjouterAdmin", showAddPlanningForm);
+router.post("/planningAjouterAdmin", AddPlanning);
+router.get("/updatePlanning/:id", editPlanning);
+router.post("/updatePlanning/:id", editPlanningSubmit);
+router.delete("/deleteCompletePlanning/:id", deleteCompletePlanning);
 
-
-// GESTION  DES INSTRUCTEURS  //
- router.get('/gestionInstructeurs', gestionInstructeurs);
-
-// ROUTE  POST POUR LES SUPPRISSION INSTRUCTEURS //
-router.post('/supprimerInstructeur', supprimerInstructeur);
-// ROUTE  POST POUR AJOUTÉ INSTRUCTEUR //
-router.post('/ajouterInstructeur', ajouterInstructeur);
-
-
-
-// ROUTE POUR AFFICHER PLANNING PUBLIC  // 
-
-router.get('/planningPublic',displayPlannigPublic);
-
-// ROUTE POUR SUPPRIMER LE PLANNING //
-
-router.get('/deleteCompletePlanning/:id', deleteCompletePlanning);
-
-// ROUTE POST RÉSERVATION DES SÉANCES DE SPORT //
-router.post('/makeReservation',reservationSubmitCreaneau);
-
-
-// ROUTE POUR AFFICHER LA PAGE RÉSERVATION 
-router.get('/reservation',reservation,);
-
-
-// ROUTE RÉSERVATION ET VÉRIFICATION SI L'UTILISATEUR EST CONNECTÉ //
-router.get('/reservation/:id',AuthenticationUser);
-
-
-
-// POST AJOUTER PLANNING //
-router.post("/planningAjouterAdmin",AddPlanning );
-
-
-// ROUTE AFFICHER PLANNING //
-router.get("/Planning", displayPlannig );
-
-
-
-// ROUTE POUR AFFICHER LE FORMULAIRE DE MODIFICATION  //
-router.get('/updatePlanning/:id', editPlanning);
-
-// ROUTE POUR TRAITER LA SOUMISSION DE FOMULAIRE DE MODFICATION //
-router.post("/updatePlanning/:id",editPlanningSubmit);
-
+// ROUTES POUR LES RÉSERVATIONS
+router.get("/reservation", reservation);
+router.get("/reservation/:id", AuthenticationUser);
+router.post("/makeReservation", reservationSubmitCreaneau);
+router.get("/tableauReservations", tableauReservation);
 
 export default router;
